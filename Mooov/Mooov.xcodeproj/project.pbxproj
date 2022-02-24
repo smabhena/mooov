@@ -197,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287F2D6827C77CA800A1D228 /* Build configuration list for PBXNativeTarget "Mooov" */;
 			buildPhases = (
+				287F2D8427C77E9100A1D228 /* ShellScript */,
 				287F2D3A27C77CA100A1D228 /* Sources */,
 				287F2D3B27C77CA100A1D228 /* Frameworks */,
 				287F2D3C27C77CA100A1D228 /* Resources */,
@@ -315,6 +316,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		287F2D8427C77E9100A1D228 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		287F2D3A27C77CA100A1D228 /* Sources */ = {
