@@ -1,2 +1,2 @@
 # mooov
-Your favourite movie information retrieval app
+An iOS movie information retrieval app builting using Swift
