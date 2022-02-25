@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - SearchResults
 struct SearchResults: Codable {
-    let search: [Movie?]
+    let search: [Movie]?
     let totalResults, response: String?
     
     enum CodingKeys: String, CodingKey {

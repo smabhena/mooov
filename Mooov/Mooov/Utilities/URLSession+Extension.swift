@@ -33,10 +33,8 @@ extension URLSession {
         
         let apiTask = self.dataTask(with: request) { data, _, error in
             
-            // Ensures that the data recieved is safe to use
             guard let safeData = data else {
                 
-                // Confirms if there is an error else custom error we created
                 if let error = error {
                     completion(.failure(error))
                 } else {
@@ -46,17 +44,15 @@ extension URLSession {
             }
             
             do {
-                // Runs JSON deserialization from the safe data into the generic model we pass in
                 let result = try JSONDecoder().decode(model, from: safeData)
-                
-                // Tells the code we are complete and return what we deserialization
-                completion(.success(result))
+                DispatchQueue.main.async {
+                    completion(.success(result))
+                }
             } catch {
                 completion(.failure(error))
             }
         }
         
         apiTask.resume()
-        
     }
 }

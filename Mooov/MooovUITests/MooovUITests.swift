@@ -18,7 +18,7 @@ class MooovUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation -
         // Required for your tests before they run. The setUp method is a good place to do this.
     }
-b
+
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
