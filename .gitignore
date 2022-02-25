@@ -36,7 +36,7 @@ playground.xcworkspace
 
 # OS-specific files
 .Trashes
-.DS_Store
+*.DS_Store
 Thumbs.db
 
 # Swift Package Manager

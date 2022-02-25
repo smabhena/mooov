@@ -24,7 +24,7 @@ class SearchResultsViewController: UIViewController {
             searchText = "None"
         }
 
-        searchLabel.text = ": '\(searchText)'"
+        searchLabel.text = "'\(searchText)'"
         
         searchMovies(searchText)
         
@@ -50,6 +50,7 @@ class SearchResultsViewController: UIViewController {
             switch result {
             case .success(let data):
                 self?.results = data
+                print("Data: \(data)")
                 self?.tableView.reloadData()
             case .failure(let error):
                 print(error)
