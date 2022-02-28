@@ -30,14 +30,9 @@ class SearchResultsViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        if let res = self.results {
-            print("Results: \(res)")
-        }
     }
     
     func searchMovies(_ searchTitle: String) {
-        
         let querySearch = URLQueryItem(name: "s", value: searchTitle)
         let queryResponse = URLQueryItem(name: "r", value: "json")
         let queryPage = URLQueryItem(name: "page", value: "1")
@@ -64,19 +59,20 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.results?.search?.count {
-            print("Count: \(count)")
             return count
         }
-        print("Failed to get count")
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        if let movieTitle = self.results?.search?[indexPath.row].title {
-            cell.textLabel?.text = movieTitle
+        guard let movieTitle = self.results?.search?[indexPath.row].title else {
+            return UITableViewCell()
         }
+        
+        cell.textLabel?.text = movieTitle
+        
         return cell
     }
 }
