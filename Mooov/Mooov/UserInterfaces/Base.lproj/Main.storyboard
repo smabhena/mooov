@@ -108,14 +108,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mooov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOT-DS-95h">
-                                <rect key="frame" x="20" y="100" width="374" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a movie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3i-1h-u8n">
-                                <rect key="frame" x="20" y="178" width="374" height="40"/>
+                                <rect key="frame" x="20" y="167" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Byl-eI-VRb"/>
                                 </constraints>
@@ -123,13 +117,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jb0-jG-VZI">
-                                <rect key="frame" x="20" y="248" width="374" height="36"/>
+                                <rect key="frame" x="20" y="237" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-yI-hCO">
+                                <rect key="frame" x="148" y="771" width="130" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search">
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Fac-XR-6lA"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moonlight.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-SG-4ed">
-                                <rect key="frame" x="-11" y="306" width="436" height="284"/>
+                                <rect key="frame" x="-11" y="295" width="436" height="284"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="436" id="CDB-ZP-UbJ"/>
                                     <constraint firstAttribute="height" constant="284" id="COK-jm-8Ki"/>
@@ -141,25 +146,21 @@
                         <constraints>
                             <constraint firstItem="sp6-SG-4ed" firstAttribute="centerX" secondItem="AaA-cB-wXa" secondAttribute="centerX" id="0AU-yh-XGS"/>
                             <constraint firstItem="jb0-jG-VZI" firstAttribute="leading" secondItem="J2h-mG-jeh" secondAttribute="leading" constant="20" id="9vN-WS-v2C"/>
-                            <constraint firstItem="J2h-mG-jeh" firstAttribute="trailing" secondItem="VOT-DS-95h" secondAttribute="trailing" constant="20" id="CCo-nD-ceY"/>
                             <constraint firstItem="W3i-1h-u8n" firstAttribute="leading" secondItem="J2h-mG-jeh" secondAttribute="leading" constant="20" id="CPq-tk-bwf"/>
                             <constraint firstItem="J2h-mG-jeh" firstAttribute="trailing" secondItem="jb0-jG-VZI" secondAttribute="trailing" constant="20" id="EOb-g3-of7"/>
+                            <constraint firstItem="W3i-1h-u8n" firstAttribute="top" secondItem="J2h-mG-jeh" secondAttribute="top" constant="27" id="Sub-uY-3Ek"/>
                             <constraint firstItem="J2h-mG-jeh" firstAttribute="trailing" secondItem="W3i-1h-u8n" secondAttribute="trailing" constant="20" id="Vbv-BF-1pd"/>
-                            <constraint firstItem="VOT-DS-95h" firstAttribute="top" secondItem="J2h-mG-jeh" secondAttribute="top" constant="56" id="WmD-cj-qQ7"/>
-                            <constraint firstItem="VOT-DS-95h" firstAttribute="leading" secondItem="J2h-mG-jeh" secondAttribute="leading" constant="20" id="ZQY-QF-JOP"/>
                             <constraint firstItem="W3i-1h-u8n" firstAttribute="centerX" secondItem="AaA-cB-wXa" secondAttribute="centerX" id="a0j-rY-BMB"/>
                             <constraint firstItem="sp6-SG-4ed" firstAttribute="top" secondItem="jb0-jG-VZI" secondAttribute="bottom" constant="22" id="ev9-FK-egn"/>
-                            <constraint firstItem="VOT-DS-95h" firstAttribute="centerX" secondItem="AaA-cB-wXa" secondAttribute="centerX" id="hI1-aF-NKo"/>
-                            <constraint firstItem="W3i-1h-u8n" firstAttribute="top" secondItem="VOT-DS-95h" secondAttribute="bottom" constant="30" id="j72-KG-j2v"/>
                             <constraint firstItem="jb0-jG-VZI" firstAttribute="centerX" secondItem="AaA-cB-wXa" secondAttribute="centerX" id="lgl-nX-nBg"/>
                             <constraint firstItem="jb0-jG-VZI" firstAttribute="top" secondItem="W3i-1h-u8n" secondAttribute="bottom" constant="30" id="off-6M-pFw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="9hV-9h-eaw"/>
+                    <navigationItem key="navigationItem" title="Mooov" largeTitleDisplayMode="always" id="9hV-9h-eaw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGq-sd-mZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4684.057971014493" y="-648.21428571428567"/>
+            <point key="canvasLocation" x="5594.202898550725" y="-648.21428571428567"/>
         </scene>
         <!--Search-->
         <scene sceneID="tne-QT-ifu">
@@ -170,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a movie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t29-Dj-lRv">
-                                <rect key="frame" x="32" y="59" width="350" height="40"/>
+                                <rect key="frame" x="32" y="155" width="350" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Gy6-uo-Acw"/>
                                     <constraint firstAttribute="width" constant="350" id="K9N-yy-Ff8"/>
@@ -179,7 +180,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-hC-s8c">
-                                <rect key="frame" x="32" y="119" width="350" height="40"/>
+                                <rect key="frame" x="32" y="215" width="350" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jJs-zs-dho"/>
@@ -213,14 +214,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5510.144927536232" y="-648.21428571428567"/>
+            <point key="canvasLocation" x="6420.289855072464" y="-648.21428571428567"/>
         </scene>
         <!--Search Results View Controller-->
         <scene sceneID="tVf-pl-xxc">
             <objects>
                 <viewController storyboardIdentifier="searchResultsVC" id="lQZ-RW-Pqz" customClass="SearchResultsViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPg-wh-2fm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Results for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA0-iS-Gne">
@@ -264,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRV-ge-Mw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6331.884057971015" y="-648.21428571428567"/>
+            <point key="canvasLocation" x="7242.0289855072469" y="-648.21428571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="giu-8o-u3b">
@@ -283,6 +284,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eS-RS-2M8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1959.4202898550727" y="-648.21428571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EV7-Wm-ilF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DB3-Db-qPz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gxH-wb-L27">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WfU-Ka-T5f" kind="relationship" relationship="rootViewController" id="t5k-TU-IJH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTe-xz-n1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4684.057971014493" y="-648.21428571428567"/>
         </scene>
     </scenes>
     <resources>

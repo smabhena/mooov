@@ -16,6 +16,9 @@
 		28544AFF27CCB2B600B869B2 /* blackpanther.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */; };
 		28544B0027CCB2B600B869B2 /* blackpanther.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */; };
 		28544B0127CCB2B600B869B2 /* blackpanther.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */; };
+		28544B0527CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */; };
+		28544B0627CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */; };
+		28544B0727CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */; };
 		287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4327C77CA100A1D228 /* SceneDelegate.swift */; };
 		287F2D4627C77CA100A1D228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4527C77CA100A1D228 /* ViewController.swift */; };
@@ -73,6 +76,7 @@
 		28544AF627CCB2A700B869B2 /* moonlight.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = moonlight.jpeg; path = "../../../../Task 5/Designs/Images/Posters/moonlight.jpeg"; sourceTree = "<group>"; };
 		28544AFA27CCB2AF00B869B2 /* freeguy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = freeguy.jpg; path = "../../../../Task 5/Designs/Images/Posters/freeguy.jpg"; sourceTree = "<group>"; };
 		28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackpanther.jpeg; path = "../../../../Task 5/Designs/Images/Posters/blackpanther.jpeg"; sourceTree = "<group>"; };
+		28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		287F2D3E27C77CA100A1D228 /* Mooov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287F2D4127C77CA100A1D228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287F2D4327C77CA100A1D228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28544B0327CE190300B869B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		287F2D3527C77CA100A1D228 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 		287F2D4027C77CA100A1D228 /* Mooov */ = {
 			isa = PBXGroup;
 			children = (
+				28544B0327CE190300B869B2 /* Extensions */,
 				287F2D7627C77D0600A1D228 /* Models */,
 				287F2D7527C77CFA00A1D228 /* Resources */,
 				287F2D7427C77CEB00A1D228 /* UserInterfaces */,
@@ -403,6 +416,7 @@
 				287F2D8127C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				28E44C3927CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
 				287F2D7D27C77E0200A1D228 /* MovieModel.swift in Sources */,
+				28544B0527CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */,
 				287F2D8E27C7C70F00A1D228 /* SearchResultsViewController.swift in Sources */,
 				287F2D7927C77DED00A1D228 /* Constants.swift in Sources */,
@@ -415,6 +429,7 @@
 			files = (
 				287F2D8B27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
 				287F2D8227C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
+				28544B0627CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				28B8664827C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */,
 				287F2D7E27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28E44C3A27CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
@@ -438,6 +453,7 @@
 				287F2D6527C77CA800A1D228 /* MooovUITestsLaunchTests.swift in Sources */,
 				287F2D8827C7BAB500A1D228 /* Endpoint.swift in Sources */,
 				287F2D8C27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
+				28544B0727CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				287F2D7B27C77DED00A1D228 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
