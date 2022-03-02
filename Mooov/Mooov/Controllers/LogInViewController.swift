@@ -14,13 +14,13 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction private func loginButtonPressed(_ sender: Any) {
-        if usernameField.text == "Admin" && passwordField.text == "TestPass123"{
-            guard let landingPageScreen = storyboard?.instantiateViewController(identifier: "landingPageVC") as? LandingPageViewController else {
-                return
-            }
+        if usernameField.text == "Admin" && passwordField.text == "TestPass123" {
+            let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
             
-            landingPageScreen.modalPresentationStyle = .fullScreen
-            present(landingPageScreen, animated: true, completion: nil)
+            if let navigator = self.navigationController {
+                navigator.pushViewController(tabBarController, animated: true)
+                navigator.setNavigationBarHidden(true, animated: false)
+            }
             
         } else {
             self.displayAlert(title: "Log in failed",

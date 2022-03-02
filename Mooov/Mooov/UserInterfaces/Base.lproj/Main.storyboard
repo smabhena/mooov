@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T1M-Uz-Fty">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Mh-l7-urB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log in-->
+        <!--Log In View Controller-->
         <scene sceneID="g3K-AT-jcq">
             <objects>
                 <viewController id="T1M-Uz-Fty" customClass="LogInViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <constraint firstItem="zYk-Du-9lo" firstAttribute="centerX" secondItem="NWM-39-aSP" secondAttribute="centerX" id="uvx-5q-pSj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Log in" id="Tzj-1x-M9z"/>
+                    <navigationItem key="navigationItem" id="Tzj-1x-M9z"/>
                     <connections>
                         <outlet property="passwordField" destination="099-pY-VIP" id="Xka-LM-H8a"/>
                         <outlet property="usernameField" destination="BMi-6R-0Nz" id="r3P-2f-9P9"/>
@@ -98,12 +98,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4Z-DI-9n6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Dh1-Of-g0g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1704" y="-1350"/>
+            <point key="canvasLocation" x="2613.04347826087" y="-1350"/>
         </scene>
         <!--Home-->
         <scene sceneID="bwH-gI-AFL">
             <objects>
-                <navigationController id="qdi-N2-shF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="landingPage" id="qdi-N2-shF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ua6-4M-VAm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x4G-6a-qwP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -254,7 +254,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="6qa-1c-a2L">
             <objects>
-                <tabBarController id="deF-Gd-tVg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="deF-Gd-tVg" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="za2-m6-u7N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -271,7 +271,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0u-Aj-8uT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546" y="-1350"/>
+            <point key="canvasLocation" x="3455.072463768116" y="-1350"/>
         </scene>
         <!--Search-->
         <scene sceneID="6DY-4z-WD7">
@@ -356,6 +356,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ye-gH-z54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3709" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5eX-x2-PRc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Mh-l7-urB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="woP-G2-bHJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T1M-Uz-Fty" kind="relationship" relationship="rootViewController" id="qE8-QG-cza"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb0-qO-ctE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702.8985507246377" y="-1350"/>
         </scene>
     </scenes>
     <resources>
