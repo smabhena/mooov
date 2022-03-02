@@ -16,14 +16,12 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction private func buttonPressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "searchResultsVC") as? SearchResultsViewController
-        
-        if let vc = vc {
+        let searchResultsPage = storyboard?.instantiateViewController(identifier: "searchResultsVC") as? SearchResultsViewController
+
+        if let searchResultsPage = searchResultsPage {
             if let text = searchField.text {
-                vc.searchText = text
-                vc.modalPresentationStyle = .fullScreen
+                searchResultsPage.searchText = text
             }
-            present(vc, animated: true, completion: nil)
         }
     }
     
