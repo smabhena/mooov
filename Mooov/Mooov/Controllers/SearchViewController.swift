@@ -22,6 +22,10 @@ class SearchViewController: UIViewController {
             if let text = searchField.text {
                 searchResultsPage.searchText = text
             }
+            
+            if let navigator = self.navigationController {
+                navigator.pushViewController(searchResultsPage, animated: true)
+            }
         }
     }
     

@@ -177,7 +177,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CAH-OS-56f"/>
-                                    <segue destination="lQZ-RW-Pqz" kind="show" id="Jvc-di-BBD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,6 +193,7 @@
                     <navigationItem key="navigationItem" title="Search" id="6kG-5E-juH"/>
                     <connections>
                         <outlet property="searchField" destination="t29-Dj-lRv" id="T8S-Ma-bMS"/>
+                        <segue destination="lQZ-RW-Pqz" kind="show" id="QjM-oR-EHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
