@@ -13,6 +13,8 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var signUpButton: UIButton!
+    
     @IBAction private func loginButtonPressed(_ sender: Any) {
         if usernameField.text == "Admin" && passwordField.text == "TestPass123" {
             let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
@@ -31,5 +33,8 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signUpButton.layer.borderWidth = 1.0
+        signUpButton.layer.borderColor = UIColor.primaryColor.cgColor
     }
 }
