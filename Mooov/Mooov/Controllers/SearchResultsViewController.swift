@@ -24,9 +24,11 @@ class SearchResultsViewController: UIViewController {
             searchText = "None"
         }
 
-        searchLabel.text = "'\(searchText)'"
+        let trimmedText: String = searchText.trimmingCharacters(in: .whitespaces)
         
-        searchMovies(searchText)
+        searchLabel.text = "'\(trimmedText)'"
+        
+        searchMovies(trimmedText)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -74,5 +76,25 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
         cell.textLabel?.text = movieTitle
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showMovieScreen", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieInfoPage = segue.destination as? MovieInfoViewController {
+                guard let index = tableView.indexPathForSelectedRow?.row else {
+                    return
+                }
+                guard let movie = results?.search?[index] else {
+                    return
+                }
+                
+                if let movieID = movie.imdbId {
+                    movieInfoPage.movieId = movieID
+                }
+            
+        }
     }
 }

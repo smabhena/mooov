@@ -28,6 +28,12 @@
 		28544B1127CF8CE500B869B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1027CF8CE500B869B2 /* UIColorExtension.swift */; };
 		28544B1227CF8CE500B869B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1027CF8CE500B869B2 /* UIColorExtension.swift */; };
 		28544B1327CF8CE500B869B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1027CF8CE500B869B2 /* UIColorExtension.swift */; };
+		28544B1527CF9A2200B869B2 /* MovieInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */; };
+		28544B1627CF9A2200B869B2 /* MovieInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */; };
+		28544B1727CF9A2200B869B2 /* MovieInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */; };
+		28544B1927D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
+		28544B1A27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
+		28544B1B27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
 		287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4327C77CA100A1D228 /* SceneDelegate.swift */; };
 		287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4527C77CA100A1D228 /* SearchViewController.swift */; };
@@ -53,9 +59,6 @@
 		287F2D8B27C7BDDA00A1D228 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D8927C7BDDA00A1D228 /* ResultsModel.swift */; };
 		287F2D8C27C7BDDA00A1D228 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D8927C7BDDA00A1D228 /* ResultsModel.swift */; };
 		287F2D8E27C7C70F00A1D228 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D8D27C7C70F00A1D228 /* SearchResultsViewController.swift */; };
-		28B8664727C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8664627C81BDA00E10E49 /* UIImageView+Extension.swift */; };
-		28B8664827C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8664627C81BDA00E10E49 /* UIImageView+Extension.swift */; };
-		28B8664927C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8664627C81BDA00E10E49 /* UIImageView+Extension.swift */; };
 		28E44C3527CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
 		28E44C3627CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
 		28E44C3727CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
@@ -89,6 +92,8 @@
 		28544B0827CF855900B869B2 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
 		28544B0C27CF885C00B869B2 /* MooovLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MooovLogo.png; path = ../../../../../../MooovLogo.png; sourceTree = "<group>"; };
 		28544B1027CF8CE500B869B2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoModel.swift; sourceTree = "<group>"; };
+		28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		287F2D3E27C77CA100A1D228 /* Mooov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287F2D4127C77CA100A1D228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287F2D4327C77CA100A1D228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +113,6 @@
 		287F2D8527C7BAB500A1D228 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		287F2D8927C7BDDA00A1D228 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
 		287F2D8D27C7C70F00A1D228 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = Mooov/Controllers/SearchResultsViewController.swift; sourceTree = SOURCE_ROOT; };
-		28B8664627C81BDA00E10E49 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		28E44C3827CC133900A30EE1 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +147,7 @@
 			children = (
 				28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */,
 				28544B1027CF8CE500B869B2 /* UIColorExtension.swift */,
+				28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,7 +206,6 @@
 		287F2D7127C77CB700A1D228 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				28B8664627C81BDA00E10E49 /* UIImageView+Extension.swift */,
 				287F2D7827C77DED00A1D228 /* Constants.swift */,
 				287F2D8027C77E2100A1D228 /* URLSession+Extension.swift */,
 				287F2D8527C7BAB500A1D228 /* Endpoint.swift */,
@@ -257,6 +261,7 @@
 			children = (
 				287F2D7C27C77E0200A1D228 /* MovieModel.swift */,
 				287F2D8927C7BDDA00A1D228 /* ResultsModel.swift */,
+				28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -425,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B8664727C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */,
 				287F2D8A27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
 				28544B1127CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
 				28E44C3527CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
@@ -437,6 +441,8 @@
 				28E44C3927CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
 				287F2D7D27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28544B0527CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
+				28544B1527CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
+				28544B1927D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
 				287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */,
 				287F2D8E27C7C70F00A1D228 /* SearchResultsViewController.swift in Sources */,
 				287F2D7927C77DED00A1D228 /* Constants.swift in Sources */,
@@ -451,9 +457,10 @@
 				28544B0A27CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
 				287F2D8227C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				28544B0627CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
-				28B8664827C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */,
+				28544B1627CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
 				287F2D7E27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28E44C3A27CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
+				28544B1A27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
 				28E44C3627CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
 				287F2D5927C77CA800A1D228 /* MooovTests.swift in Sources */,
 				287F2D7A27C77DED00A1D228 /* Constants.swift in Sources */,
@@ -466,10 +473,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28544B1727CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
 				287F2D7F27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				287F2D8327C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				28E44C3727CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
-				28B8664927C81BDA00E10E49 /* UIImageView+Extension.swift in Sources */,
+				28544B1B27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
 				287F2D6327C77CA800A1D228 /* MooovUITests.swift in Sources */,
 				28E44C3B27CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
 				28544B1327CF8CE500B869B2 /* UIColorExtension.swift in Sources */,

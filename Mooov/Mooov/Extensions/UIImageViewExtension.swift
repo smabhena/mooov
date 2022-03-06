@@ -1,8 +1,8 @@
 //
-//  UIImageView+Extension.swift
+//  UIImageViewExtension.swift
 //  Mooov
 //
-//  Created by Sinothando Mabhena on 2022/02/24.
+//  Created by Sinothando Mabhena on 2022/03/03.
 //
 
 import Foundation

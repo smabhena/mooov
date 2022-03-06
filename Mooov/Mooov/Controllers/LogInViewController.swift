@@ -10,10 +10,15 @@ import UIKit
 class LogInViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var signUpButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        signUpButton.layer.borderWidth = 1.0
+        signUpButton.layer.borderColor = UIColor.primaryColor.cgColor
+    }
     
     @IBAction private func loginButtonPressed(_ sender: Any) {
         if usernameField.text == "Admin" && passwordField.text == "TestPass123" {
@@ -29,12 +34,5 @@ class LogInViewController: UIViewController {
                               message: "Enter correct username or password",
                               buttonTitle: "Ok")
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        signUpButton.layer.borderWidth = 1.0
-        signUpButton.layer.borderColor = UIColor.primaryColor.cgColor
     }
 }
