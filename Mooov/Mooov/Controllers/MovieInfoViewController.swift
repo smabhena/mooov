@@ -34,7 +34,7 @@ class MovieInfoViewController: UIViewController {
         var endpoint = Constants.endpoint
         endpoint.queryItems = [queryID, queryResponse]
                 
-        URLSession.shared.makeSearchRequest(url: endpoint.url, model: MovieInfo.self) { [weak self] result in
+        URLSession.shared.makeMovieRequest(url: endpoint.url, model: MovieInfo.self) { [weak self] result in
         
             switch result {
             case .success(let data):

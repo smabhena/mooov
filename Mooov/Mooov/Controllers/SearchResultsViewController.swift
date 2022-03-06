@@ -42,7 +42,7 @@ class SearchResultsViewController: UIViewController {
         var endpoint = Constants.endpoint
         endpoint.queryItems = [querySearch, queryResponse, queryPage]
                 
-        URLSession.shared.makeSearchRequest(url: endpoint.url, model: SearchResults.self) { [weak self] result in
+        URLSession.shared.makeMovieRequest(url: endpoint.url, model: SearchResults.self) { [weak self] result in
         
             switch result {
             case .success(let data):
