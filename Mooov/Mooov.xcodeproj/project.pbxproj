@@ -21,7 +21,7 @@
 		28544B0727CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */; };
 		287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4327C77CA100A1D228 /* SceneDelegate.swift */; };
-		287F2D4627C77CA100A1D228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4527C77CA100A1D228 /* ViewController.swift */; };
+		287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4527C77CA100A1D228 /* SearchViewController.swift */; };
 		287F2D4927C77CA100A1D228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287F2D4727C77CA100A1D228 /* Main.storyboard */; };
 		287F2D4B27C77CA600A1D228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287F2D4A27C77CA600A1D228 /* Assets.xcassets */; };
 		287F2D4E27C77CA600A1D228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287F2D4C27C77CA600A1D228 /* LaunchScreen.storyboard */; };
@@ -80,7 +80,7 @@
 		287F2D3E27C77CA100A1D228 /* Mooov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287F2D4127C77CA100A1D228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287F2D4327C77CA100A1D228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		287F2D4527C77CA100A1D228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		287F2D4527C77CA100A1D228 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		287F2D4827C77CA100A1D228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		287F2D4A27C77CA600A1D228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287F2D4D27C77CA600A1D228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				287F2D8D27C7C70F00A1D228 /* SearchResultsViewController.swift */,
-				287F2D4527C77CA100A1D228 /* ViewController.swift */,
+				287F2D4527C77CA100A1D228 /* SearchViewController.swift */,
 				28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */,
 				28E44C3827CC133900A30EE1 /* LandingPageViewController.swift */,
 			);
@@ -411,7 +411,7 @@
 				287F2D8A27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
 				28E44C3527CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
 				287F2D8627C7BAB500A1D228 /* Endpoint.swift in Sources */,
-				287F2D4627C77CA100A1D228 /* ViewController.swift in Sources */,
+				287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */,
 				287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */,
 				287F2D8127C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				28E44C3927CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
