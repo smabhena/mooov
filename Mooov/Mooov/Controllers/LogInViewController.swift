@@ -15,9 +15,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        signUpButton.layer.borderWidth = 1.0
-        signUpButton.layer.borderColor = UIColor.primaryColor.cgColor
+        signUpButton.setCustomButtonStyling()
     }
     
     @IBAction private func loginButtonPressed(_ sender: Any) {
