@@ -8,7 +8,6 @@
 import UIKit
 
 class MovieInfoViewController: UIViewController {
-    var movie: MovieInfo?
     var movieTitle: String?
     var movieId: String?
     
@@ -38,31 +37,12 @@ class MovieInfoViewController: UIViewController {
         
             switch result {
             case .success(let data):
-                self?.movie = data
-                
-                if let imageURL = data.poster {
-                    self?.loadImageIntoImageView(imageURL)
-                }
-                
-                if let movieTitle = data.title {
-                    self?.movieTitleLabel.text = movieTitle
-                }
-                
-                if let movieGenre = data.genre {
-                    self?.movieGenre.text = movieGenre
-                }
-                
-                if let movieRuntime = data.runtime {
-                    self?.movieRuntime.text = movieRuntime
-                }
-                
-                if let movieRating = data.rating {
-                    self?.movieRating.text = movieRating[0].value
-                }
-                
-                if let moviePlot = data.plot {
-                    self?.moviePlot.text = moviePlot
-                }
+                self?.loadImageIntoImageView(data.poster)
+                self?.movieTitleLabel.text = data.title
+                self?.movieGenre.text = data.genre
+                self?.movieRuntime.text = data.runtime
+                self?.movieRating.text = data.imdbRating
+                self?.moviePlot.text = data.plot
                 
                 print("Data: \(data)")
             case .failure(let error):
@@ -73,9 +53,7 @@ class MovieInfoViewController: UIViewController {
     
     func loadImageIntoImageView(_ imageURL: String) {
         let url = URL(string: imageURL)
-        guard let url = url else {
-            return
-        }
+        guard let url = url else { return }
         movieImage.load(url: url)
     }
 }

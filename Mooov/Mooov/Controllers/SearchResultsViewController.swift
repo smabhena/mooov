@@ -47,7 +47,6 @@ class SearchResultsViewController: UIViewController {
             switch result {
             case .success(let data):
                 self?.results = data
-                print("Data: \(data)")
                 self?.tableView.reloadData()
             case .failure(let error):
                 print(error)
@@ -60,7 +59,7 @@ class SearchResultsViewController: UIViewController {
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.results?.search?.count {
+        if let count = self.results?.search.count {
             return count
         }
         return 0
@@ -69,7 +68,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        guard let movieTitle = self.results?.search?[indexPath.row].title else {
+        guard let movieTitle = self.results?.search[indexPath.row].title else {
             return UITableViewCell()
         }
         
@@ -84,17 +83,10 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let movieInfoPage = segue.destination as? MovieInfoViewController {
-                guard let index = tableView.indexPathForSelectedRow?.row else {
-                    return
-                }
-                guard let movie = results?.search?[index] else {
-                    return
-                }
+                guard let index = tableView.indexPathForSelectedRow?.row else { return }
+                guard let movie = results?.search[index] else { return }
                 
-                if let movieID = movie.imdbId {
-                    movieInfoPage.movieId = movieID
-                }
-            
+                movieInfoPage.movieId = movie.imdbId
         }
     }
 }

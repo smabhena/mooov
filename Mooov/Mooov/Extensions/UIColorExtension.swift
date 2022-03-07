@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 extension UIColor {
-  static let primaryColor: UIColor = UIColor(named: "PrimaryColor")!
+    static let primaryColor: UIColor = UIColor(named: "PrimaryColor") ?? UIColor.red
 }

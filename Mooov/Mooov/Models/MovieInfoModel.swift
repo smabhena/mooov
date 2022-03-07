@@ -10,8 +10,8 @@ import Foundation
 // MARK: - Movie Information
 
 struct MovieInfo: Codable {
-    let title, year, rated, released, runtime, genre, director, writer, actors, plot, language, country, awards, poster: String?
-    let metascore, imdbRating, imdbVotes, imdbId, type, dvd, boxOffice, production, website, response: String?
+    let title, year, rated, released, runtime, genre, director, writer, actors, plot, language, country, awards, poster: String
+    let metascore, imdbRating, imdbVotes, imdbId, type, dvd, boxOffice, production, website, response: String
     let rating: [Rating]?
     
     enum CodingKeys: String, CodingKey {
