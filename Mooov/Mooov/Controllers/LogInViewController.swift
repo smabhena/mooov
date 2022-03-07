@@ -9,9 +9,9 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
-    @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet private weak var usernameField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

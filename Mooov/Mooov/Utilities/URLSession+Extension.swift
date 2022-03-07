@@ -17,8 +17,8 @@ extension URLSession {
     }
     
     func makeMovieRequest<Generic: Codable>(url: URL?,
-                                             model: Generic.Type,
-                                             completion: @escaping (Result<Generic, Error>) -> Void) {
+                                            model: Generic.Type,
+                                            completion: @escaping (Result<Generic, Error>) -> Void) {
         
         guard let endpointURL = url else {
             completion(.failure(CustomError.invalidUrl))
