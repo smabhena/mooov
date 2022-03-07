@@ -11,12 +11,12 @@ class MovieInfoViewController: UIViewController {
     var movieTitle: String?
     var movieId: String?
     
-    @IBOutlet weak var movieImage: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var movieGenre: UILabel!
-    @IBOutlet weak var movieRuntime: UILabel!
-    @IBOutlet weak var movieRating: UILabel!
-    @IBOutlet weak var moviePlot: UITextView!
+    @IBOutlet private weak var movieImage: UIImageView!
+    @IBOutlet private weak var movieTitleLabel: UILabel!
+    @IBOutlet private weak var movieGenre: UILabel!
+    @IBOutlet private weak var movieRuntime: UILabel!
+    @IBOutlet private weak var movieRating: UILabel!
+    @IBOutlet private weak var moviePlot: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class MovieInfoViewController: UIViewController {
         
             switch result {
             case .success(let data):
-                self?.loadImageIntoImageView(data.poster)
+                self?.loadImageIntoImageView(data.poster, self?.movieImage)
                 self?.movieTitleLabel.text = data.title
                 self?.movieGenre.text = data.genre
                 self?.movieRuntime.text = data.runtime
@@ -49,11 +49,5 @@ class MovieInfoViewController: UIViewController {
                 print(error)
             }
         }
-    }
-    
-    func loadImageIntoImageView(_ imageURL: String) {
-        let url = URL(string: imageURL)
-        guard let url = url else { return }
-        movieImage.load(url: url)
     }
 }

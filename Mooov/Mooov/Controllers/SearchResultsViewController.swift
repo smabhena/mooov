@@ -9,12 +9,10 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     
-    @IBOutlet weak var searchLabel: UILabel!
-    
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
     
     var searchText: String = ""
-    
     var results: SearchResults?
     
     override func viewDidLoad() {

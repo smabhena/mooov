@@ -14,4 +14,10 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func loadImageIntoImageView(_ imageURL: String, _ imageView: UIImageView!) {
+        let url = URL(string: imageURL)
+        guard let url = url else { return }
+        imageView.load(url: url)
+    }
 }
