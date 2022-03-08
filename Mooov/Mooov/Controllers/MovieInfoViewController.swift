@@ -8,7 +8,6 @@
 import UIKit
 
 class MovieInfoViewController: UIViewController {
-    var movieTitle: String?
     var movieId: String?
     
     @IBOutlet private weak var movieImage: UIImageView!
