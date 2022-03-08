@@ -14,10 +14,15 @@ Mooov is a movie information retrieval mobile application built for iOS. This ap
 
 ## App screenshots 📷
 <p align="center">
-<img src="https://user-images.githubusercontent.com/100207221/155948923-945d9944-7564-42b9-b130-aa1542868b28.png" width="300" height="500" />
-<img src="https://user-images.githubusercontent.com/100207221/155949042-eb9211f7-a751-4387-b5ca-31490771ef27.png" width="300" height="500" />
+<img src="https://user-images.githubusercontent.com/100207221/155948923-945d9944-7564-42b9-b130-aa1542868b28.png" width="300" height="530" />
+<img src="https://user-images.githubusercontent.com/100207221/155949042-eb9211f7-a751-4387-b5ca-31490771ef27.png" width="300" height="530" />
 </p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/100207221/155949156-a578b86f-5ac0-4655-b25d-777d24d8baf2.png" width="300" height="500" />
-<img src="https://user-images.githubusercontent.com/100207221/155949218-e02ec7b2-9f70-4568-8d1c-5a440ecf87ac.png" width="300" height="500" />
+<img src="https://user-images.githubusercontent.com/100207221/157190954-fa697b74-70cb-4c7c-8b44-97c4eaed85ac.png" width="300" height="530" />
+<img src="https://user-images.githubusercontent.com/100207221/157191389-1df6ebcb-9394-4d55-9243-60910e9ed5b1.png" width="300" height="530" />
+</p>
+</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/100207221/157191048-6ebe434e-b178-4104-8934-161713dd2408.png" width="300" height="530" />
+<img src="https://user-images.githubusercontent.com/100207221/157191140-b7c332d1-34f2-4598-a4c6-97179bec03be.png" width="300" height="530" />
 </p>
