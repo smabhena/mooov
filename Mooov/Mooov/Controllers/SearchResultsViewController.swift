@@ -9,12 +9,10 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     
-    @IBOutlet weak var searchLabel: UILabel!
-    
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
     
     var searchText: String = ""
-    
     var results: SearchResults?
     
     override func viewDidLoad() {
@@ -24,9 +22,11 @@ class SearchResultsViewController: UIViewController {
             searchText = "None"
         }
 
-        searchLabel.text = "'\(searchText)'"
+        let trimmedText: String = searchText.trimmingCharacters(in: .whitespaces)
         
-        searchMovies(searchText)
+        searchLabel.text = "'\(trimmedText)'"
+        
+        searchMovies(trimmedText)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,12 +40,11 @@ class SearchResultsViewController: UIViewController {
         var endpoint = Constants.endpoint
         endpoint.queryItems = [querySearch, queryResponse, queryPage]
                 
-        URLSession.shared.makeSearchRequest(url: endpoint.url, model: SearchResults.self) { [weak self] result in
+        URLSession.shared.makeMovieRequest(url: endpoint.url, model: SearchResults.self) { [weak self] result in
         
             switch result {
             case .success(let data):
                 self?.results = data
-                print("Data: \(data)")
                 self?.tableView.reloadData()
             case .failure(let error):
                 print(error)
@@ -58,7 +57,7 @@ class SearchResultsViewController: UIViewController {
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.results?.search?.count {
+        if let count = self.results?.search.count {
             return count
         }
         return 0
@@ -67,12 +66,25 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        guard let movieTitle = self.results?.search?[indexPath.row].title else {
+        guard let movieTitle = self.results?.search[indexPath.row].title else {
             return UITableViewCell()
         }
         
         cell.textLabel?.text = movieTitle
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showMovieScreen", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieInfoPage = segue.destination as? MovieInfoViewController {
+                guard let index = tableView.indexPathForSelectedRow?.row else { return }
+                guard let movie = results?.search[index] else { return }
+                
+                movieInfoPage.movieId = movie.imdbId
+        }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Movie
 struct Movie: Codable {
-    let title, year, imdbId, type, poster: String?
+    let title, year, imdbId, type, poster: String
     
     enum CodingKeys: String, CodingKey {
         case title = "Title"

@@ -12,5 +12,4 @@ class LandingPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }

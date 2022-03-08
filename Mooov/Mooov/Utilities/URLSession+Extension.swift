@@ -16,9 +16,9 @@ extension URLSession {
         case invalidData
     }
     
-    func makeSearchRequest<Generic: Codable>(url: URL?,
-                                             model: Generic.Type,
-                                             completion: @escaping (Result<Generic, Error>) -> Void) {
+    func makeMovieRequest<Generic: Codable>(url: URL?,
+                                            model: Generic.Type,
+                                            completion: @escaping (Result<Generic, Error>) -> Void) {
         
         guard let endpointURL = url else {
             completion(.failure(CustomError.invalidUrl))
