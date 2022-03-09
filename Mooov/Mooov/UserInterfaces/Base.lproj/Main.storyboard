@@ -169,20 +169,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a movie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t29-Dj-lRv">
-                                <rect key="frame" x="32" y="103" width="350" height="40"/>
+                                <rect key="frame" x="20" y="103" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Gy6-uo-Acw"/>
-                                    <constraint firstAttribute="width" constant="350" id="K9N-yy-Ff8"/>
+                                    <constraint firstAttribute="height" constant="40" id="U3q-N6-LIn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-hC-s8c">
-                                <rect key="frame" x="32" y="163" width="350" height="40"/>
+                                <rect key="frame" x="20" y="163" width="374" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="jJs-zs-dho"/>
-                                    <constraint firstAttribute="width" constant="350" id="sjQ-VC-xnv"/>
+                                    <constraint firstAttribute="height" constant="40" id="JXn-wI-XDz"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
@@ -197,11 +195,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cRA-hC-s8c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hxi-c3-94r"/>
-                            <constraint firstItem="t29-Dj-lRv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6A-pl-mrO"/>
-                            <constraint firstItem="t29-Dj-lRv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="iG3-F9-O1l"/>
-                            <constraint firstItem="cRA-hC-s8c" firstAttribute="top" secondItem="t29-Dj-lRv" secondAttribute="bottom" constant="20" id="lpd-kA-I7u"/>
-                            <constraint firstItem="cRA-hC-s8c" firstAttribute="top" secondItem="t29-Dj-lRv" secondAttribute="bottom" constant="20" id="zsb-cR-IJS"/>
+                            <constraint firstItem="cRA-hC-s8c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9PK-wT-qrj"/>
+                            <constraint firstItem="t29-Dj-lRv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARY-k3-Wnd"/>
+                            <constraint firstItem="cRA-hC-s8c" firstAttribute="top" secondItem="t29-Dj-lRv" secondAttribute="bottom" constant="20" id="Ju5-vt-JSn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRA-hC-s8c" secondAttribute="trailing" constant="20" id="Rnj-Db-PDz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t29-Dj-lRv" secondAttribute="trailing" constant="20" id="YNv-oD-gTa"/>
+                            <constraint firstItem="t29-Dj-lRv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f9h-gT-A3n"/>
+                            <constraint firstItem="cRA-hC-s8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l0A-5f-fhw"/>
+                            <constraint firstItem="t29-Dj-lRv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="tmK-FO-Z2t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="6kG-5E-juH"/>
