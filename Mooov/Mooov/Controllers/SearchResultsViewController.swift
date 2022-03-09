@@ -24,7 +24,7 @@ class SearchResultsViewController: UIViewController {
 
         let trimmedText: String = searchText.trimmingCharacters(in: .whitespaces)
         
-        searchLabel.text = "'\(trimmedText)'"
+        searchLabel.text = "Search results for '\(trimmedText)'"
         
         searchMovies(trimmedText)
         
