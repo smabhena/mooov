@@ -22,9 +22,6 @@
 		28544B0927CF855A00B869B2 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0827CF855900B869B2 /* MovieInfoViewController.swift */; };
 		28544B0A27CF855A00B869B2 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0827CF855900B869B2 /* MovieInfoViewController.swift */; };
 		28544B0B27CF855A00B869B2 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B0827CF855900B869B2 /* MovieInfoViewController.swift */; };
-		28544B0D27CF885C00B869B2 /* MooovLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 28544B0C27CF885C00B869B2 /* MooovLogo.png */; };
-		28544B0E27CF885C00B869B2 /* MooovLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 28544B0C27CF885C00B869B2 /* MooovLogo.png */; };
-		28544B0F27CF885C00B869B2 /* MooovLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 28544B0C27CF885C00B869B2 /* MooovLogo.png */; };
 		28544B1127CF8CE500B869B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1027CF8CE500B869B2 /* UIColorExtension.swift */; };
 		28544B1227CF8CE500B869B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1027CF8CE500B869B2 /* UIColorExtension.swift */; };
 		28544B1327CF8CE500B869B2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1027CF8CE500B869B2 /* UIColorExtension.swift */; };
@@ -93,7 +90,6 @@
 		28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackpanther.jpeg; path = "../../../../Task 5/Designs/Images/Posters/blackpanther.jpeg"; sourceTree = "<group>"; };
 		28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		28544B0827CF855900B869B2 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
-		28544B0C27CF885C00B869B2 /* MooovLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MooovLogo.png; path = ../../../../../../MooovLogo.png; sourceTree = "<group>"; };
 		28544B1027CF8CE500B869B2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoModel.swift; sourceTree = "<group>"; };
 		28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -253,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				287F2D4A27C77CA600A1D228 /* Assets.xcassets */,
-				28544B0C27CF885C00B869B2 /* MooovLogo.png */,
 				28544AFA27CCB2AF00B869B2 /* freeguy.jpg */,
 				28544AF627CCB2A700B869B2 /* moonlight.jpeg */,
 				28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */,
@@ -381,7 +376,6 @@
 				28544AFF27CCB2B600B869B2 /* blackpanther.jpeg in Resources */,
 				287F2D4B27C77CA600A1D228 /* Assets.xcassets in Resources */,
 				287F2D4927C77CA100A1D228 /* Main.storyboard in Resources */,
-				28544B0D27CF885C00B869B2 /* MooovLogo.png in Resources */,
 				28544AF727CCB2A700B869B2 /* moonlight.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +385,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28544AF827CCB2A700B869B2 /* moonlight.jpeg in Resources */,
-				28544B0E27CF885C00B869B2 /* MooovLogo.png in Resources */,
 				28544AFC27CCB2AF00B869B2 /* freeguy.jpg in Resources */,
 				28544B0027CCB2B600B869B2 /* blackpanther.jpeg in Resources */,
 			);
@@ -402,7 +395,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28544AF927CCB2A700B869B2 /* moonlight.jpeg in Resources */,
-				28544B0F27CF885C00B869B2 /* MooovLogo.png in Resources */,
 				28544AFD27CCB2AF00B869B2 /* freeguy.jpg in Resources */,
 				28544B0127CCB2B600B869B2 /* blackpanther.jpeg in Resources */,
 			);
