@@ -19,8 +19,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction private func loginButtonPressed(_ sender: Any) {
-//        username: Admin, password: TestPass123
-        if usernameField.text == "" && passwordField.text == "" {
+        if usernameField.text == "Admin" && passwordField.text == "TestPass123" {
             let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
             
             if let navigator = self.navigationController {
