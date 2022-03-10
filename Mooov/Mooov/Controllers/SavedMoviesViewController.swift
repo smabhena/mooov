@@ -18,6 +18,7 @@ class SavedMoviesViewController: UIViewController {
         getAllSavedMovies()
         savedMoviesTableView.delegate = self
         savedMoviesTableView.dataSource = self
+        savedMoviesTableView.rowHeight = 150
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,16 +68,20 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         
+        guard let image =  movie.movieImage else {
+            return UITableViewCell()
+        }
+        
         cell.textLabel?.text = movie.movieTitle
+        
+        self.loadImageIntoImageView(image, cell.imageView)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            guard let movieItem = movies?[indexPath.row] else {
-                return
-            }
+            guard let movieItem = movies?[indexPath.row] else { return }
             deleteMovieItem(movieItem)
             movies?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
