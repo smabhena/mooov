@@ -29,7 +29,7 @@ class MovieInfoViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if let movieTitle = movieTitle {
             if let movieImage = movieImage {
                 isMovieSaved(movieTitle, movieImage)
@@ -53,9 +53,6 @@ class MovieInfoViewController: UIViewController {
         do {
             try context.save()
             self.savedMovieButton.disableButton("Saved")
-            self.displayAlert(title: "Movie: '\(movieTitle)' saved",
-                              message: "Press OK to go back",
-                              buttonTitle: "Ok")
         } catch {
             // Throw error
         }

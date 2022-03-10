@@ -20,7 +20,14 @@ class SearchViewController: UIViewController {
 
         if let searchResultsPage = searchResultsPage {
             if let text = searchField.text {
-                searchResultsPage.searchText = text
+                if text == "" {
+                    self.displayAlert(title: "Search field empty",
+                                      message: "Enter a movie title to search",
+                                      buttonTitle: "Ok")
+                    return
+                } else {
+                    searchResultsPage.searchText = text
+                }
             }
             
             if let navigator = self.navigationController {
