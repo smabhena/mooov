@@ -13,4 +13,10 @@ extension UIButton {
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.primaryColor.cgColor
     }
+    
+    func disableButton(_ disabaledTextLabel: String) {
+        self.isEnabled = false
+        self.setTitle(disabaledTextLabel, for: .disabled)
+        self.setTitle("Saved", for: .disabled)
+    }
 }

@@ -19,12 +19,21 @@ class MovieInfoViewController: UIViewController {
     @IBOutlet private weak var movieRuntime: UILabel!
     @IBOutlet private weak var movieRating: UILabel!
     @IBOutlet private weak var moviePlot: UITextView!
+    @IBOutlet private weak var savedMovieButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let movieId = movieId {
             getMovie(movieId)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let movieTitle = movieTitle {
+            if let movieImage = movieImage {
+                isMovieSaved(movieTitle, movieImage)
+            }
         }
     }
     
@@ -42,8 +51,8 @@ class MovieInfoViewController: UIViewController {
         newItem.movieImage = movieImage
         
         do {
-            print("Saved")
             try context.save()
+            self.savedMovieButton.disableButton("Saved")
             self.displayAlert(title: "Movie: '\(movieTitle)' saved",
                               message: "Press OK to go back",
                               buttonTitle: "Ok")
@@ -72,6 +81,19 @@ class MovieInfoViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    func isMovieSaved(_ movieTitle: String, _ movieImage: String) {
+        do {
+            guard let movies = try context?.fetch(MovieItem.fetchRequest()) else { return }
+            
+            for movie in movies where movie.movieTitle == movieTitle {
+                self.savedMovieButton.disableButton("Saved")
+                return
+            }
+        } catch {
+            // Throw error
         }
     }
 }

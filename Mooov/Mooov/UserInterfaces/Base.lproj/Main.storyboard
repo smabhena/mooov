@@ -396,6 +396,7 @@
                         <outlet property="movieRating" destination="Jpg-EB-Zeh" id="BQ7-d9-VVU"/>
                         <outlet property="movieRuntime" destination="OTa-ls-Ysw" id="Jdz-OE-Bbb"/>
                         <outlet property="movieTitleLabel" destination="olM-5N-viH" id="9ac-02-cXb"/>
+                        <outlet property="savedMovieButton" destination="ppE-cL-33Q" id="IKL-Y6-mMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHt-u0-NTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

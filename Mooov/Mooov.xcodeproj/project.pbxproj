@@ -288,10 +288,18 @@
 		289B115627D9E81700B97847 /* CoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
+				289B115F27DA039100B97847 /* MovieItemClass */,
+			);
+			path = CoreDataClasses;
+			sourceTree = "<group>";
+		};
+		289B115F27DA039100B97847 /* MovieItemClass */ = {
+			isa = PBXGroup;
+			children = (
 				289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */,
 				289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */,
 			);
-			path = CoreDataClasses;
+			path = MovieItemClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
