@@ -54,7 +54,7 @@ class MovieInfoViewController: UIViewController {
             try context.save()
             self.savedMovieButton.disableButton("Saved")
         } catch {
-            // Throw error
+            print("Failed to save")
         }
     }
     
