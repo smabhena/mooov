@@ -90,7 +90,7 @@ class MovieInfoViewController: UIViewController {
                 return
             }
         } catch {
-            // Throw error
+            print("Failed to get movies")
         }
     }
 }

@@ -33,7 +33,7 @@ class SavedMoviesViewController: UIViewController {
             }
             
         } catch {
-            // Throw error
+            print("Failed to get movies")
         }
     }
     
@@ -47,7 +47,7 @@ class SavedMoviesViewController: UIViewController {
         do {
             try context.save()
         } catch {
-            // Throw error
+            print("Failed save")
         }
     }
 
