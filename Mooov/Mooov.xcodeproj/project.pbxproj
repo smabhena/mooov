@@ -59,6 +59,9 @@
 		289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114027D5DD4600B97847 /* UIButtonExtension.swift */; };
 		289B114227D5DD4600B97847 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114027D5DD4600B97847 /* UIButtonExtension.swift */; };
 		289B114327D5DD4600B97847 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114027D5DD4600B97847 /* UIButtonExtension.swift */; };
+		289B114627D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289B114427D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld */; };
+		289B114727D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289B114427D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld */; };
+		289B114827D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289B114427D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld */; };
 		28E44C3527CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
 		28E44C3627CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
 		28E44C3727CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
@@ -113,6 +116,7 @@
 		287F2D8927C7BDDA00A1D228 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
 		287F2D8D27C7C70F00A1D228 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = Mooov/Controllers/SearchResultsViewController.swift; sourceTree = SOURCE_ROOT; };
 		289B114027D5DD4600B97847 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		289B114527D9E19E00B97847 /* MooovCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MooovCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		28E44C3827CC133900A30EE1 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +224,7 @@
 				287F2D4F27C77CA600A1D228 /* Info.plist */,
 				287F2D4127C77CA100A1D228 /* AppDelegate.swift */,
 				287F2D4327C77CA100A1D228 /* SceneDelegate.swift */,
+				289B114427D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				28544B1527CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
 				28544B1927D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
 				287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */,
+				289B114627D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld in Sources */,
 				287F2D8E27C7C70F00A1D228 /* SearchResultsViewController.swift in Sources */,
 				287F2D7927C77DED00A1D228 /* Constants.swift in Sources */,
 			);
@@ -463,6 +469,7 @@
 				287F2D5927C77CA800A1D228 /* MooovTests.swift in Sources */,
 				287F2D7A27C77DED00A1D228 /* Constants.swift in Sources */,
 				289B114227D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
+				289B114727D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld in Sources */,
 				287F2D8727C7BAB500A1D228 /* Endpoint.swift in Sources */,
 				28544B1227CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
 			);
@@ -483,6 +490,7 @@
 				287F2D6527C77CA800A1D228 /* MooovUITestsLaunchTests.swift in Sources */,
 				287F2D8827C7BAB500A1D228 /* Endpoint.swift in Sources */,
 				287F2D8C27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
+				289B114827D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld in Sources */,
 				289B114327D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
 				28544B0727CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				287F2D7B27C77DED00A1D228 /* Constants.swift in Sources */,
@@ -813,6 +821,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		289B114427D9E19E00B97847 /* MooovCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				289B114527D9E19E00B97847 /* MooovCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 289B114527D9E19E00B97847 /* MooovCoreDataModel.xcdatamodel */;
+			path = MooovCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 287F2D3627C77CA100A1D228 /* Project object */;
 }
