@@ -316,6 +316,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-cL-33Q">
+                                                <rect key="frame" x="235" y="235" width="161" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Save">
+                                                    <color key="baseForegroundColor" name="SecondaryColor"/>
+                                                    <color key="baseBackgroundColor" name="PrimaryColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tappedAddButton" destination="xhu-SS-oKX" eventType="touchUpInside" id="Mcb-IX-3me"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="oN9-9F-yXI" secondAttribute="bottom" constant="75" id="685-DE-Up5"/>
@@ -379,7 +391,7 @@
                     <navigationItem key="navigationItem" title="Movie details" id="Clh-Ce-TWx"/>
                     <connections>
                         <outlet property="movieGenre" destination="xlR-Ef-wd3" id="H3Z-zQ-bMz"/>
-                        <outlet property="movieImage" destination="oN9-9F-yXI" id="uNv-Kw-8ic"/>
+                        <outlet property="movieImageView" destination="oN9-9F-yXI" id="EPR-1r-pgX"/>
                         <outlet property="moviePlot" destination="QS5-xj-Lrw" id="8Zh-wf-Y8m"/>
                         <outlet property="movieRating" destination="Jpg-EB-Zeh" id="BQ7-d9-VVU"/>
                         <outlet property="movieRuntime" destination="OTa-ls-Ysw" id="Jdz-OE-Bbb"/>
@@ -429,11 +441,11 @@
             </objects>
             <point key="canvasLocation" x="2168" y="-601"/>
         </scene>
-        <!--Favourites-->
+        <!--Saved-->
         <scene sceneID="Dj1-lO-gMG">
             <objects>
                 <navigationController id="QLT-JO-flR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favourites" image="square.and.arrow.down" catalog="system" id="6FZ-kT-24c"/>
+                    <tabBarItem key="tabBarItem" title="Saved" image="square.and.arrow.down" catalog="system" id="6FZ-kT-24c"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W4L-WO-21D">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -463,17 +475,43 @@
             </objects>
             <point key="canvasLocation" x="3710" y="-601"/>
         </scene>
-        <!--Favourites-->
+        <!--Saved movies-->
         <scene sceneID="xyA-Wj-bXa">
             <objects>
-                <viewController id="qBK-MW-zRo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="savedMoviesVC" id="qBK-MW-zRo" customClass="SavedMoviesViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pF3-zC-oRC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-T6-Za5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lFj-rX-sFK">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lFj-rX-sFK" id="cpQ-3J-FYP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tCs-gP-zu1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m2u-T6-Za5" firstAttribute="centerX" secondItem="pF3-zC-oRC" secondAttribute="centerX" id="98i-Gz-1sh"/>
+                            <constraint firstItem="m2u-T6-Za5" firstAttribute="leading" secondItem="tCs-gP-zu1" secondAttribute="leading" id="Aeh-iy-b1L"/>
+                            <constraint firstItem="m2u-T6-Za5" firstAttribute="top" secondItem="tCs-gP-zu1" secondAttribute="top" id="Hwx-cG-V8r"/>
+                            <constraint firstItem="tCs-gP-zu1" firstAttribute="bottom" secondItem="m2u-T6-Za5" secondAttribute="bottom" id="JuE-3e-OWw"/>
+                            <constraint firstItem="tCs-gP-zu1" firstAttribute="trailing" secondItem="m2u-T6-Za5" secondAttribute="trailing" id="RAr-sr-b0F"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Favourites" id="IhZ-aN-7nz"/>
+                    <navigationItem key="navigationItem" title="Saved movies" id="IhZ-aN-7nz"/>
+                    <connections>
+                        <outlet property="savedMoviesTableView" destination="m2u-T6-Za5" id="gVo-bx-mBq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbD-8u-J7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

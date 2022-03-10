@@ -29,8 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
     
+    // MARK: - Core Data stack
+    
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MooovCoreDataModel")
+        let container = NSPersistentContainer(name: "Mooov")
         container.loadPersistentStores(completionHandler: { (_ , error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

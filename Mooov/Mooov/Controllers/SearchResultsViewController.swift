@@ -85,6 +85,8 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
                 guard let movie = results?.search[index] else { return }
                 
                 movieInfoPage.movieId = movie.imdbId
+                movieInfoPage.movieTitle = movie.title
+                movieInfoPage.movieImage = movie.poster
         }
     }
 }
