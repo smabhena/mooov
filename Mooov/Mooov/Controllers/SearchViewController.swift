@@ -8,7 +8,6 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
     @IBOutlet private weak var searchField: UITextField!
     
     override func viewDidLoad() {
@@ -26,7 +25,7 @@ class SearchViewController: UIViewController {
                                       buttonTitle: "Ok")
                     return
                 } else {
-                    searchResultsPage.searchText = text
+                    searchResultsPage.setSearchText(text)
                 }
             }
             
@@ -38,6 +37,6 @@ class SearchViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as? SearchResultsViewController
-        destinationVC?.searchText = searchField.text ?? "None"
+        destinationVC?.setSearchText(searchField.text ?? "")
     }
 }

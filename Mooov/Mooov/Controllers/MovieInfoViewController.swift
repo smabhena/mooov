@@ -8,11 +8,6 @@
 import UIKit
 
 class MovieInfoViewController: UIViewController {
-    private var movieId: String?
-    private var movieTitle: String?
-    private var movieImage: String?
-    private let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-    
     @IBOutlet private weak var movieImageView: UIImageView!
     @IBOutlet private weak var movieTitleLabel: UILabel!
     @IBOutlet private weak var movieGenre: UILabel!
@@ -20,6 +15,11 @@ class MovieInfoViewController: UIViewController {
     @IBOutlet private weak var movieRating: UILabel!
     @IBOutlet private weak var moviePlot: UITextView!
     @IBOutlet private weak var savedMovieButton: UIButton!
+    
+    private var movieId: String?
+    private var movieTitle: String?
+    private var movieImage: String?
+    private let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
