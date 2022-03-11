@@ -8,9 +8,9 @@
 import UIKit
 
 class MovieInfoViewController: UIViewController {
-    var movieId: String?
-    var movieTitle: String?
-    var movieImage: String?
+    private var movieId: String?
+    private var movieTitle: String?
+    private var movieImage: String?
     private let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     @IBOutlet private weak var movieImageView: UIImageView!
@@ -39,6 +39,18 @@ class MovieInfoViewController: UIViewController {
     
     @IBAction private func tappedAddButton() {
         createMovieItem(movieTitle, movieImage)
+    }
+    
+    func setMovieId(_ movieId: String) {
+        self.movieId = movieId
+    }
+    
+    func setMovieTitle(_ movieTitle: String) {
+        self.movieTitle = movieTitle
+    }
+    
+    func setMovieImage(_ movieImage: String) {
+        self.movieImage = movieImage
     }
     
     func createMovieItem(_ movieTitle: String?, _ movieImage: String?) {
