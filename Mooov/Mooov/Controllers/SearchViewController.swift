@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
 
         if let searchResultsPage = searchResultsPage {
             if let text = searchField.text {
-                if text == "" {
+                if text.isEmpty {
                     self.displayAlert(title: "Search field empty",
                                       message: "Enter a movie title to search",
                                       buttonTitle: "Ok")

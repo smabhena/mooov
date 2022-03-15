@@ -10,12 +10,10 @@ import UIKit
 class SavedMoviesViewController: UIViewController {
     @IBOutlet private weak var savedMoviesTableView: UITableView!
     
-    private let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     private var movies: [MovieItem]? = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAllSavedMovies()
         savedMoviesTableView.delegate = self
         savedMoviesTableView.dataSource = self
         savedMoviesTableView.rowHeight = 150
@@ -27,18 +25,18 @@ class SavedMoviesViewController: UIViewController {
     
     func getAllSavedMovies() {
         do {
-            movies = try context?.fetch(MovieItem.fetchRequest())
+            movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest())
             DispatchQueue.main.async {
                 self.savedMoviesTableView.reloadData()
             }
             
-        } catch {
-            print("Failed to get movies")
+        } catch let error as NSError {
+            print("Failed to fetch: \(error), \(error.userInfo)")
         }
     }
     
     func deleteMovieItem(_ movieItem: MovieItem) {
-        guard let context = context else {
+        guard let context = Constants.viewContext else {
             return
         }
         
@@ -46,8 +44,8 @@ class SavedMoviesViewController: UIViewController {
         
         do {
             try context.save()
-        } catch {
-            print("Failed save")
+        } catch let error as NSError {
+            print("Failed to save: \(error), \(error.userInfo)")
         }
     }
 
@@ -62,17 +60,19 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell else {
+            return UITableViewCell()
+        }
         
         guard let movie = movies?[indexPath.row] else {
             return UITableViewCell()
         }
         
-        guard let image =  movie.movieImage else {
+        guard let image = movie.image else {
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = movie.movieTitle
+        cell.textLabel?.text = movie.title
         
         self.loadImageIntoImageView(image, cell.imageView)
         
@@ -87,4 +87,8 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
+}
+
+class MovieTableViewCell: UITableViewCell {
+
 }

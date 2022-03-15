@@ -14,6 +14,6 @@ extension MovieItem {
         return NSFetchRequest<MovieItem>(entityName: "MovieItem")
     }
 
-    @NSManaged public var movieTitle: String?
-    @NSManaged public var movieImage: String?
+    @NSManaged public var title: String?
+    @NSManaged public var image: String?
 }

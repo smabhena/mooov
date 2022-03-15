@@ -8,65 +8,64 @@
 import UIKit
 
 class MovieInfoViewController: UIViewController {
-    @IBOutlet private weak var movieImageView: UIImageView!
-    @IBOutlet private weak var movieTitleLabel: UILabel!
-    @IBOutlet private weak var movieGenre: UILabel!
-    @IBOutlet private weak var movieRuntime: UILabel!
-    @IBOutlet private weak var movieRating: UILabel!
-    @IBOutlet private weak var moviePlot: UITextView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var genreLabel: UILabel!
+    @IBOutlet private weak var runtimeLabel: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var plotLabel: UITextView!
     @IBOutlet private weak var savedMovieButton: UIButton!
     
-    private var movieId: String?
+    private var id: String?
     private var movieTitle: String?
-    private var movieImage: String?
-    private let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    private var image: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let movieId = movieId {
-            getMovie(movieId)
+        if let id = id {
+            getMovie(id)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if let movieTitle = movieTitle {
-            if let movieImage = movieImage {
-                isMovieSaved(movieTitle, movieImage)
+            if let image = image {
+                isMovieSaved(movieTitle, image)
             }
         }
     }
     
     @IBAction private func tappedAddButton() {
-        createMovieItem(movieTitle, movieImage)
+        createMovieItem(movieTitle, image)
     }
     
-    func setMovieId(_ movieId: String) {
-        self.movieId = movieId
+    func setMovieId(_ id: String) {
+        self.id = id
     }
     
-    func setMovieTitle(_ movieTitle: String) {
-        self.movieTitle = movieTitle
+    func setMovieTitle(_ title: String) {
+        self.movieTitle = title
     }
     
-    func setMovieImage(_ movieImage: String) {
-        self.movieImage = movieImage
+    func setMovieImage(_ image: String) {
+        self.image = image
     }
     
-    func createMovieItem(_ movieTitle: String?, _ movieImage: String?) {
-        guard let movieTitle = movieTitle else { return }
-        guard let movieImage = movieImage else { return }
-        guard let context = context else { return }
+    func createMovieItem(_ title: String?, _ image: String?) {
+        guard let title = title else { return }
+        guard let image = image else { return }
+        guard let context = Constants.viewContext else { return }
         
         let newItem = MovieItem(context: context)
-        newItem.movieTitle = movieTitle
-        newItem.movieImage = movieImage
+        newItem.title = title
+        newItem.image = image
         
         do {
             try context.save()
             self.savedMovieButton.disableButton("Saved")
-        } catch {
-            print("Failed to save")
+        } catch let error as NSError {
+            print("Failed to saved: \(error), \(error.userInfo)")
         }
     }
     
@@ -81,12 +80,12 @@ class MovieInfoViewController: UIViewController {
         
             switch result {
             case .success(let data):
-                self?.loadImageIntoImageView(data.poster, self?.movieImageView)
-                self?.movieTitleLabel.text = data.title
-                self?.movieGenre.text = data.genre
-                self?.movieRuntime.text = data.runtime
-                self?.movieRating.text = data.imdbRating
-                self?.moviePlot.text = data.plot
+                self?.loadImageIntoImageView(data.poster, self?.imageView)
+                self?.titleLabel.text = data.title
+                self?.genreLabel.text = data.genre
+                self?.runtimeLabel.text = data.runtime
+                self?.ratingLabel.text = data.imdbRating
+                self?.plotLabel.text = data.plot
             case .failure(let error):
                 print(error)
             }
@@ -95,14 +94,14 @@ class MovieInfoViewController: UIViewController {
     
     func isMovieSaved(_ movieTitle: String, _ movieImage: String) {
         do {
-            guard let movies = try context?.fetch(MovieItem.fetchRequest()) else { return }
+            guard let movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest()) else { return }
             
-            for movie in movies where movie.movieTitle == movieTitle {
+            for movie in movies where movie.title == movieTitle {
                 self.savedMovieButton.disableButton("Saved")
                 return
             }
-        } catch {
-            print("Failed to get movies")
+        } catch let error as NSError {
+            print("Failed to fetch: \(error), \(error.userInfo)")
         }
     }
 }

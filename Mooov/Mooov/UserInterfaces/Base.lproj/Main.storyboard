@@ -390,13 +390,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movie details" id="Clh-Ce-TWx"/>
                     <connections>
-                        <outlet property="movieGenre" destination="xlR-Ef-wd3" id="H3Z-zQ-bMz"/>
-                        <outlet property="movieImageView" destination="oN9-9F-yXI" id="EPR-1r-pgX"/>
-                        <outlet property="moviePlot" destination="QS5-xj-Lrw" id="8Zh-wf-Y8m"/>
-                        <outlet property="movieRating" destination="Jpg-EB-Zeh" id="BQ7-d9-VVU"/>
-                        <outlet property="movieRuntime" destination="OTa-ls-Ysw" id="Jdz-OE-Bbb"/>
-                        <outlet property="movieTitleLabel" destination="olM-5N-viH" id="9ac-02-cXb"/>
+                        <outlet property="genreLabel" destination="xlR-Ef-wd3" id="quH-c9-36I"/>
+                        <outlet property="imageView" destination="oN9-9F-yXI" id="bMx-fE-XOj"/>
+                        <outlet property="plotLabel" destination="QS5-xj-Lrw" id="xZc-9f-jOO"/>
+                        <outlet property="ratingLabel" destination="Jpg-EB-Zeh" id="f21-Vh-VJr"/>
+                        <outlet property="runtimeLabel" destination="OTa-ls-Ysw" id="iys-W8-wNW"/>
                         <outlet property="savedMovieButton" destination="ppE-cL-33Q" id="IKL-Y6-mMc"/>
+                        <outlet property="titleLabel" destination="olM-5N-viH" id="L5q-PL-DPq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHt-u0-NTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
