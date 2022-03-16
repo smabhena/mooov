@@ -30,8 +30,10 @@ class SavedMoviesViewController: UIViewController {
                 self.savedMoviesTableView.reloadData()
             }
             
-        } catch let error as NSError {
-            print("Failed to fetch: \(error), \(error.userInfo)")
+        } catch {
+            self.displayAlert(title: "Failed to fetch movies",
+                              message: "Try again",
+                              buttonTitle: "Ok")
         }
     }
     
@@ -44,8 +46,10 @@ class SavedMoviesViewController: UIViewController {
         
         do {
             try context.save()
-        } catch let error as NSError {
-            print("Failed to save: \(error), \(error.userInfo)")
+        } catch {
+            self.displayAlert(title: "Failed to delete movie",
+                              message: "Try again",
+                              buttonTitle: "Ok")
         }
     }
 
@@ -87,8 +91,4 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
-}
-
-class MovieTableViewCell: UITableViewCell {
-
 }

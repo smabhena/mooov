@@ -64,8 +64,10 @@ class MovieInfoViewController: UIViewController {
         do {
             try context.save()
             self.savedMovieButton.disableButton("Saved")
-        } catch let error as NSError {
-            print("Failed to saved: \(error), \(error.userInfo)")
+        } catch {
+            self.displayAlert(title: "Failed to save movie",
+                              message: "Try again",
+                              buttonTitle: "Ok")
         }
     }
     
@@ -100,8 +102,10 @@ class MovieInfoViewController: UIViewController {
                 self.savedMovieButton.disableButton("Saved")
                 return
             }
-        } catch let error as NSError {
-            print("Failed to fetch: \(error), \(error.userInfo)")
+        } catch {
+            self.displayAlert(title: "Failed to fetch movies",
+                              message: "Try again",
+                              buttonTitle: "Ok")
         }
     }
 }
