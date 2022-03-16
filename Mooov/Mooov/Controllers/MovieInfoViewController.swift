@@ -29,10 +29,8 @@ class MovieInfoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let movieTitle = movieTitle {
-            if let image = image {
-                isMovieSaved(movieTitle, image)
-            }
+        if let movieTitle = movieTitle, let image = image {
+            isMovieSaved(movieTitle, image)
         }
     }
     
@@ -53,10 +51,8 @@ class MovieInfoViewController: UIViewController {
     }
     
     func createMovieItem(_ title: String?, _ image: String?) {
-        guard let title = title else { return }
-        guard let image = image else { return }
-        guard let context = Constants.viewContext else { return }
-        
+        guard let title = title, let image = image, let context = Constants.viewContext else { return }
+
         let newItem = MovieItem(context: context)
         newItem.title = title
         newItem.image = image
