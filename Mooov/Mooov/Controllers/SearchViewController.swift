@@ -8,7 +8,6 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
     @IBOutlet private weak var searchField: UITextField!
     
     override func viewDidLoad() {
@@ -20,7 +19,14 @@ class SearchViewController: UIViewController {
 
         if let searchResultsPage = searchResultsPage {
             if let text = searchField.text {
-                searchResultsPage.searchText = text
+                if text.isEmpty {
+                    self.displayAlert(title: "Search field empty",
+                                      message: "Enter a movie title to search",
+                                      buttonTitle: "Ok")
+                    return
+                } else {
+                    searchResultsPage.setSearchText(text)
+                }
             }
             
             if let navigator = self.navigationController {
@@ -31,6 +37,6 @@ class SearchViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as? SearchResultsViewController
-        destinationVC?.searchText = searchField.text ?? "None"
+        destinationVC?.setSearchText(searchField.text ?? "")
     }
 }

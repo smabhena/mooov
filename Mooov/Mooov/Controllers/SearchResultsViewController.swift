@@ -8,12 +8,11 @@
 import UIKit
 
 class SearchResultsViewController: UIViewController {
-    
     @IBOutlet private weak var searchLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
     
-    var searchText: String = ""
-    var results: SearchResults?
+    private var searchText: String = ""
+    private var results: SearchResults?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +29,10 @@ class SearchResultsViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func setSearchText(_ searchText: String) {
+        self.searchText = searchText
     }
     
     func searchMovies(_ searchTitle: String) {
@@ -55,7 +58,6 @@ class SearchResultsViewController: UIViewController {
 }
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = self.results?.search.count {
             return count
@@ -84,7 +86,9 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
                 guard let index = tableView.indexPathForSelectedRow?.row else { return }
                 guard let movie = results?.search[index] else { return }
                 
-                movieInfoPage.movieId = movie.imdbId
+                movieInfoPage.setMovieId(movie.imdbId)
+                movieInfoPage.setMovieTitle(movie.title)
+                movieInfoPage.setMovieImage(movie.poster)
         }
     }
 }

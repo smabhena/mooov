@@ -8,20 +8,62 @@
 import UIKit
 
 class MovieInfoViewController: UIViewController {
-    var movieId: String?
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var genreLabel: UILabel!
+    @IBOutlet private weak var runtimeLabel: UILabel!
+    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var plotLabel: UITextView!
+    @IBOutlet private weak var savedMovieButton: UIButton!
     
-    @IBOutlet private weak var movieImage: UIImageView!
-    @IBOutlet private weak var movieTitleLabel: UILabel!
-    @IBOutlet private weak var movieGenre: UILabel!
-    @IBOutlet private weak var movieRuntime: UILabel!
-    @IBOutlet private weak var movieRating: UILabel!
-    @IBOutlet private weak var moviePlot: UITextView!
+    private var id: String?
+    private var movieTitle: String?
+    private var image: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let movieId = movieId {
-            getMovie(movieId)
+        if let id = id {
+            getMovie(id)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let movieTitle = movieTitle, let image = image {
+            isMovieSaved(movieTitle, image)
+        }
+    }
+    
+    @IBAction private func tappedAddButton() {
+        createMovieItem(movieTitle, image)
+    }
+    
+    func setMovieId(_ id: String) {
+        self.id = id
+    }
+    
+    func setMovieTitle(_ title: String) {
+        self.movieTitle = title
+    }
+    
+    func setMovieImage(_ image: String) {
+        self.image = image
+    }
+    
+    func createMovieItem(_ title: String?, _ image: String?) {
+        guard let title = title, let image = image, let context = Constants.viewContext else { return }
+
+        let newItem = MovieItem(context: context)
+        newItem.title = title
+        newItem.image = image
+        
+        do {
+            try context.save()
+            self.savedMovieButton.disableButton("Saved")
+        } catch {
+            self.displayAlert(title: "Failed to save movie",
+                              message: "Try again",
+                              buttonTitle: "Ok")
         }
     }
     
@@ -36,17 +78,30 @@ class MovieInfoViewController: UIViewController {
         
             switch result {
             case .success(let data):
-                self?.loadImageIntoImageView(data.poster, self?.movieImage)
-                self?.movieTitleLabel.text = data.title
-                self?.movieGenre.text = data.genre
-                self?.movieRuntime.text = data.runtime
-                self?.movieRating.text = data.imdbRating
-                self?.moviePlot.text = data.plot
-                
-                print("Data: \(data)")
+                self?.loadImageIntoImageView(data.poster, self?.imageView)
+                self?.titleLabel.text = data.title
+                self?.genreLabel.text = data.genre
+                self?.runtimeLabel.text = data.runtime
+                self?.ratingLabel.text = data.imdbRating
+                self?.plotLabel.text = data.plot
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    func isMovieSaved(_ movieTitle: String, _ movieImage: String) {
+        do {
+            guard let movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest()) else { return }
+            
+            for movie in movies where movie.title == movieTitle {
+                self.savedMovieButton.disableButton("Saved")
+                return
+            }
+        } catch {
+            self.displayAlert(title: "Failed to fetch movies",
+                              message: "Try again",
+                              buttonTitle: "Ok")
         }
     }
 }
