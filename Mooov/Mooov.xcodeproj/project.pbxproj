@@ -59,6 +59,18 @@
 		289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114027D5DD4600B97847 /* UIButtonExtension.swift */; };
 		289B114227D5DD4600B97847 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114027D5DD4600B97847 /* UIButtonExtension.swift */; };
 		289B114327D5DD4600B97847 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114027D5DD4600B97847 /* UIButtonExtension.swift */; };
+		289B114B27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289B114927D9E37300B97847 /* Mooov.xcdatamodeld */; };
+		289B114C27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289B114927D9E37300B97847 /* Mooov.xcdatamodeld */; };
+		289B114D27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 289B114927D9E37300B97847 /* Mooov.xcdatamodeld */; };
+		289B115027D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */; };
+		289B115127D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */; };
+		289B115227D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */; };
+		289B115327D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */; };
+		289B115427D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */; };
+		289B115527D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */; };
+		289B115C27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */; };
+		289B115D27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */; };
+		289B115E27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */; };
 		28E44C3527CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
 		28E44C3627CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
 		28E44C3727CC0A2200A30EE1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */; };
@@ -113,6 +125,10 @@
 		287F2D8927C7BDDA00A1D228 /* ResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsModel.swift; sourceTree = "<group>"; };
 		287F2D8D27C7C70F00A1D228 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = Mooov/Controllers/SearchResultsViewController.swift; sourceTree = SOURCE_ROOT; };
 		289B114027D5DD4600B97847 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		289B114A27D9E37300B97847 /* Mooov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mooov.xcdatamodel; sourceTree = "<group>"; };
+		289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMoviesViewController.swift; sourceTree = "<group>"; };
 		28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		28E44C3827CC133900A30EE1 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +192,7 @@
 		287F2D4027C77CA100A1D228 /* Mooov */ = {
 			isa = PBXGroup;
 			children = (
+				289B115627D9E81700B97847 /* CoreDataClasses */,
 				28544B0327CE190300B869B2 /* Extensions */,
 				287F2D7627C77D0600A1D228 /* Models */,
 				287F2D7527C77CFA00A1D228 /* Resources */,
@@ -183,6 +200,7 @@
 				287F2D7327C77CDE00A1D228 /* Controllers */,
 				287F2D7227C77CC900A1D228 /* Config */,
 				287F2D7127C77CB700A1D228 /* Utilities */,
+				289B114927D9E37300B97847 /* Mooov.xcdatamodeld */,
 			);
 			path = Mooov;
 			sourceTree = "<group>";
@@ -232,6 +250,7 @@
 				28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */,
 				28E44C3827CC133900A30EE1 /* LandingPageViewController.swift */,
 				28544B0827CF855900B869B2 /* MovieInfoViewController.swift */,
+				289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +283,23 @@
 				28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		289B115627D9E81700B97847 /* CoreDataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				289B115F27DA039100B97847 /* MovieItemClass */,
+			);
+			path = CoreDataClasses;
+			sourceTree = "<group>";
+		};
+		289B115F27DA039100B97847 /* MovieItemClass */ = {
+			isa = PBXGroup;
+			children = (
+				289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */,
+				289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */,
+			);
+			path = MovieItemClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,11 +466,15 @@
 				287F2D8A27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
 				28544B1127CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
 				28E44C3527CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
+				289B115327D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */,
 				287F2D8627C7BAB500A1D228 /* Endpoint.swift in Sources */,
 				287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */,
 				287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */,
+				289B115C27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */,
+				289B115027D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */,
 				287F2D8127C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
+				289B114B27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				28544B0927CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
 				28E44C3927CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
 				287F2D7D27C77E0200A1D228 /* MovieModel.swift in Sources */,
@@ -452,9 +492,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				287F2D8B27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
+				289B115D27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */,
 				28544B0A27CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
 				287F2D8227C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				28544B0627CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
+				289B115427D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */,
 				28544B1627CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
 				287F2D7E27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28E44C3A27CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
@@ -462,6 +504,8 @@
 				28E44C3627CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
 				287F2D5927C77CA800A1D228 /* MooovTests.swift in Sources */,
 				287F2D7A27C77DED00A1D228 /* Constants.swift in Sources */,
+				289B115127D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */,
+				289B114C27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				289B114227D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
 				287F2D8727C7BAB500A1D228 /* Endpoint.swift in Sources */,
 				28544B1227CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
@@ -474,6 +518,7 @@
 			files = (
 				28544B1727CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
 				287F2D7F27C77E0200A1D228 /* MovieModel.swift in Sources */,
+				289B115E27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */,
 				287F2D8327C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
 				28E44C3727CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
 				28544B1B27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
@@ -482,7 +527,10 @@
 				28544B1327CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
 				287F2D6527C77CA800A1D228 /* MooovUITestsLaunchTests.swift in Sources */,
 				287F2D8827C7BAB500A1D228 /* Endpoint.swift in Sources */,
+				289B114D27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				287F2D8C27C7BDDA00A1D228 /* ResultsModel.swift in Sources */,
+				289B115227D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */,
+				289B115527D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */,
 				289B114327D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
 				28544B0727CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				287F2D7B27C77DED00A1D228 /* Constants.swift in Sources */,
@@ -813,6 +861,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		289B114927D9E37300B97847 /* Mooov.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				289B114A27D9E37300B97847 /* Mooov.xcdatamodel */,
+			);
+			currentVersion = 289B114A27D9E37300B97847 /* Mooov.xcdatamodel */;
+			path = Mooov.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 287F2D3627C77CA100A1D228 /* Project object */;
 }

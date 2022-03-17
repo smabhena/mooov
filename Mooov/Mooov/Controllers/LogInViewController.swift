@@ -8,7 +8,6 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
     @IBOutlet private weak var usernameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
@@ -26,7 +25,6 @@ class LogInViewController: UIViewController {
                 navigator.pushViewController(tabBarController, animated: true)
                 navigator.setNavigationBarHidden(true, animated: false)
             }
-            
         } else {
             self.displayAlert(title: "Log in failed",
                               message: "Enter correct username or password",
