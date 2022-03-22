@@ -16,7 +16,7 @@ class SavedMoviesViewController: UIViewController {
         super.viewDidLoad()
         savedMoviesTableView.delegate = self
         savedMoviesTableView.dataSource = self
-        savedMoviesTableView.rowHeight = 150
+        savedMoviesTableView.rowHeight = 200
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +64,7 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SavedMovieTableViewCell else {
             return UITableViewCell()
         }
         
@@ -76,9 +76,11 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = movie.title
+        guard let title = movie.title else {
+            return UITableViewCell()
+        }
         
-        self.loadImageIntoImageView(image, cell.imageView)
+        cell.updateCellContent(image, title)
         
         return cell
     }

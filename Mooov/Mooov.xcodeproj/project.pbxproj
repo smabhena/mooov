@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2831F5F427E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */; };
 		28544AF727CCB2A700B869B2 /* moonlight.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28544AF627CCB2A700B869B2 /* moonlight.jpeg */; };
 		28544AF827CCB2A700B869B2 /* moonlight.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28544AF627CCB2A700B869B2 /* moonlight.jpeg */; };
 		28544AF927CCB2A700B869B2 /* moonlight.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 28544AF627CCB2A700B869B2 /* moonlight.jpeg */; };
@@ -97,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMovieTableViewCell.swift; sourceTree = "<group>"; };
 		28544AF627CCB2A700B869B2 /* moonlight.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = moonlight.jpeg; path = "../../../../Task 5/Designs/Images/Posters/moonlight.jpeg"; sourceTree = "<group>"; };
 		28544AFA27CCB2AF00B869B2 /* freeguy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = freeguy.jpg; path = "../../../../Task 5/Designs/Images/Posters/freeguy.jpg"; sourceTree = "<group>"; };
 		28544AFE27CCB2B600B869B2 /* blackpanther.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackpanther.jpeg; path = "../../../../Task 5/Designs/Images/Posters/blackpanther.jpeg"; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2831F5F227E9A67100E6B7F1 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		28544B0327CE190300B869B2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +255,7 @@
 		287F2D7327C77CDE00A1D228 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2831F5F227E9A67100E6B7F1 /* TableViewCells */,
 				287F2D8D27C7C70F00A1D228 /* SearchResultsViewController.swift */,
 				287F2D4527C77CA100A1D228 /* SearchViewController.swift */,
 				28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */,
@@ -473,6 +484,7 @@
 				289B115C27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */,
 				289B115027D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */,
 				287F2D8127C77E2100A1D228 /* URLSession+Extension.swift in Sources */,
+				2831F5F427E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift in Sources */,
 				289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
 				289B114B27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				28544B0927CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
