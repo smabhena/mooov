@@ -14,61 +14,35 @@ class SearchResultsViewController: UIViewController {
     private var searchText: String = ""
     private var results: SearchResults?
     
+    private lazy var viewModel = SearchMovieViewModel(repository: SearchMovieRepository(), delegate: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if searchText == "" {
-            searchText = "None"
-        }
-
-        let trimmedText: String = searchText.trimmingCharacters(in: .whitespaces)
-        
-        searchLabel.text = "Search results for '\(trimmedText)'"
-        
-        searchMovies(trimmedText)
-        
         tableView.delegate = self
         tableView.dataSource = self
+        viewModel.fetchSearchResults(setSearchResultsText())
+    }
+    
+    func setSearchResultsText() -> String {
+        let trimmedText: String = searchText.trimmingCharacters(in: .whitespaces)
+        searchLabel.text = "Search results for '\(trimmedText)'"
+        return trimmedText
     }
     
     func setSearchText(_ searchText: String) {
         self.searchText = searchText
     }
-    
-    func searchMovies(_ searchTitle: String) {
-        let querySearch = URLQueryItem(name: "s", value: searchTitle)
-        let queryResponse = URLQueryItem(name: "r", value: "json")
-        let queryPage = URLQueryItem(name: "page", value: "1")
-                
-        var endpoint = Constants.endpoint
-        endpoint.queryItems = [querySearch, queryResponse, queryPage]
-                
-        URLSession.shared.makeMovieRequest(url: endpoint.url, model: SearchResults.self) { [weak self] result in
-        
-            switch result {
-            case .success(let data):
-                self?.results = data
-                self?.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
-    }
 }
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.results?.search.count {
-            return count
-        }
-        return 0
+        return viewModel.searchCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        guard let movieTitle = self.results?.search[indexPath.row].title else {
+        guard let movieTitle = viewModel.results?.search[indexPath.row].title else {
             return UITableViewCell()
         }
         
@@ -84,11 +58,21 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let movieInfoPage = segue.destination as? MovieInfoViewController {
                 guard let index = tableView.indexPathForSelectedRow?.row else { return }
-                guard let movie = results?.search[index] else { return }
+                guard let movie = viewModel.results?.search[index] else { return }
                 
                 movieInfoPage.setMovieId(movie.imdbId)
                 movieInfoPage.setMovieTitle(movie.title)
                 movieInfoPage.setMovieImage(movie.poster)
         }
+    }
+}
+
+extension SearchResultsViewController: ViewModelDelegate {
+    func reloadView() {
+        tableView.reloadData()
+    }
+    
+    func show(error: String) {
+        displayAlert(title: "Error", message: error, buttonTitle: "Ok")
     }
 }
