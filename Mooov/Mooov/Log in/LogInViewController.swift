@@ -19,17 +19,21 @@ class LogInViewController: UIViewController {
         signUpButton.setCustomButtonStyling()
     }
     
+    func navigateToHomePage() {
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
+        
+        if let navigator = self.navigationController {
+            navigator.pushViewController(tabBarController, animated: true)
+            navigator.setNavigationBarHidden(true, animated: false)
+        }
+    }
+    
     @IBAction private func loginButtonPressed(_ sender: Any) {
         guard let username = usernameField.text else { return }
         guard let password = passwordField.text else { return }
         
         if viewModel.logInUser(username, password) {
-            let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
-            
-            if let navigator = self.navigationController {
-                navigator.pushViewController(tabBarController, animated: true)
-                navigator.setNavigationBarHidden(true, animated: false)
-            }
+            navigateToHomePage()
         } else {
             self.displayAlert(title: "Log in failed",
                               message: "Enter correct username or password",
