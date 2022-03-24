@@ -12,13 +12,18 @@ class LogInViewController: UIViewController {
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
     
+    private lazy var viewModel = LogInViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpButton.setCustomButtonStyling()
     }
     
     @IBAction private func loginButtonPressed(_ sender: Any) {
-        if usernameField.text == "Admin" && passwordField.text == "TestPass123" {
+        guard let username = usernameField.text else { return }
+        guard let password = passwordField.text else { return }
+        
+        if viewModel.logInUser(username, password) {
             let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
             
             if let navigator = self.navigationController {
