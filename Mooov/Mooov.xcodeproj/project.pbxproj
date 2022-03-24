@@ -75,6 +75,9 @@
 		28CB733C27EC6E69004C2717 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB733B27EC6E69004C2717 /* LogInViewModel.swift */; };
 		28CB733D27EC6E69004C2717 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB733B27EC6E69004C2717 /* LogInViewModel.swift */; };
 		28CB733E27EC6E69004C2717 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB733B27EC6E69004C2717 /* LogInViewModel.swift */; };
+		28CB734327EC7463004C2717 /* SaveMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB734227EC7463004C2717 /* SaveMovieViewModel.swift */; };
+		28CB734427EC7463004C2717 /* SaveMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB734227EC7463004C2717 /* SaveMovieViewModel.swift */; };
+		28CB734527EC7463004C2717 /* SaveMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB734227EC7463004C2717 /* SaveMovieViewModel.swift */; };
 		28E355D127EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E355D027EAFBAC007B759C /* SearchMovieViewModel.swift */; };
 		28E355D227EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E355D027EAFBAC007B759C /* SearchMovieViewModel.swift */; };
 		28E355D327EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E355D027EAFBAC007B759C /* SearchMovieViewModel.swift */; };
@@ -146,6 +149,7 @@
 		289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMoviesViewController.swift; sourceTree = "<group>"; };
 		28CB733627EB1D0C004C2717 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		28CB733B27EC6E69004C2717 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		28CB734227EC7463004C2717 /* SaveMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieViewModel.swift; sourceTree = "<group>"; };
 		28E355D027EAFBAC007B759C /* SearchMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewModel.swift; sourceTree = "<group>"; };
 		28E355D627EAFC90007B759C /* SearchMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieRepository.swift; sourceTree = "<group>"; };
 		28E355DB27EAFD5F007B759C /* ServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrors.swift; sourceTree = "<group>"; };
@@ -220,9 +224,10 @@
 		287F2D4027C77CA100A1D228 /* Mooov */ = {
 			isa = PBXGroup;
 			children = (
+				28CB734127EC743A004C2717 /* Save Movie */,
+				28E355CD27EAFB68007B759C /* Search Movie */,
 				28CB733A27EC6E32004C2717 /* Log in */,
 				28E355DA27EAFD44007B759C /* Service Layer */,
-				28E355CD27EAFB68007B759C /* Search Movie */,
 				289B115627D9E81700B97847 /* CoreDataClasses */,
 				28544B0327CE190300B869B2 /* Extensions */,
 				287F2D7627C77D0600A1D228 /* Models */,
@@ -279,7 +284,6 @@
 				2831F5F227E9A67100E6B7F1 /* TableViewCells */,
 				28E44C3827CC133900A30EE1 /* LandingPageViewController.swift */,
 				28544B0827CF855900B869B2 /* MovieInfoViewController.swift */,
-				289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +340,15 @@
 				28CB733B27EC6E69004C2717 /* LogInViewModel.swift */,
 			);
 			path = "Log in";
+			sourceTree = "<group>";
+		};
+		28CB734127EC743A004C2717 /* Save Movie */ = {
+			isa = PBXGroup;
+			children = (
+				28CB734227EC7463004C2717 /* SaveMovieViewModel.swift */,
+				289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */,
+			);
+			path = "Save Movie";
 			sourceTree = "<group>";
 		};
 		28E355CD27EAFB68007B759C /* Search Movie */ = {
@@ -549,6 +562,7 @@
 				289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
 				289B114B27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				28544B0927CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
+				28CB734327EC7463004C2717 /* SaveMovieViewModel.swift in Sources */,
 				28E355D127EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */,
 				28E44C3927CC133900A30EE1 /* LandingPageViewController.swift in Sources */,
 				287F2D7D27C77E0200A1D228 /* MovieModel.swift in Sources */,
@@ -591,6 +605,7 @@
 				289B114C27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				289B114227D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
 				287F2D8727C7BAB500A1D228 /* Endpoint.swift in Sources */,
+				28CB734427EC7463004C2717 /* SaveMovieViewModel.swift in Sources */,
 				28544B1227CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +635,7 @@
 				28544B0727CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				287F2D7B27C77DED00A1D228 /* Constants.swift in Sources */,
 				28544B0B27CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
+				28CB734527EC7463004C2717 /* SaveMovieViewModel.swift in Sources */,
 				28E355D527EAFBF5007B759C /* SearchResultsViewController.swift in Sources */,
 				28E355D327EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */,
 				28E355DE27EAFD5F007B759C /* ServiceErrors.swift in Sources */,
