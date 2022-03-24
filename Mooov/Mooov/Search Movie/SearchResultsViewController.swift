@@ -12,9 +12,9 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var searchText: String = ""
-    private var results: SearchResults?
     
-    private lazy var viewModel = SearchMovieViewModel(repository: SearchMovieRepository(), delegate: self)
+    private lazy var viewModel = SearchMovieViewModel(repository: SearchMovieRepository(),
+                                                      delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        guard let movieTitle = viewModel.results?.search[indexPath.row].title else {
+        guard let movieTitle = viewModel.getMovieTitle(indexPath.row) else {
             return UITableViewCell()
         }
         
@@ -58,7 +58,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let movieInfoPage = segue.destination as? MovieInfoViewController {
                 guard let index = tableView.indexPathForSelectedRow?.row else { return }
-                guard let movie = viewModel.results?.search[index] else { return }
+                guard let movie = viewModel.getMovieObject(index) else { return }
                 
                 movieInfoPage.setMovieId(movie.imdbId)
                 movieInfoPage.setMovieTitle(movie.title)
@@ -73,6 +73,8 @@ extension SearchResultsViewController: ViewModelDelegate {
     }
     
     func show(error: String) {
-        displayAlert(title: "Error", message: error, buttonTitle: "Ok")
+        displayAlert(title: "Error",
+                     message: error,
+                     buttonTitle: "Ok")
     }
 }
