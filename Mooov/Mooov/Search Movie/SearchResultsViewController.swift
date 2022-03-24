@@ -42,7 +42,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        guard let movieTitle = viewModel.getMovieTitle(indexPath.row) else {
+        guard let movieTitle = viewModel.movieTitle(indexPath.row) else {
             return UITableViewCell()
         }
         
@@ -58,7 +58,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let movieInfoPage = segue.destination as? MovieInfoViewController {
                 guard let index = tableView.indexPathForSelectedRow?.row else { return }
-                guard let movie = viewModel.getMovieObject(index) else { return }
+                guard let movie = viewModel.movieObject(index) else { return }
                 
                 movieInfoPage.setMovieId(movie.imdbId)
                 movieInfoPage.setMovieTitle(movie.title)
