@@ -15,8 +15,7 @@ protocol LogInViewModelDelegate: AnyObject {
 class LogInViewModel {
     private weak var delegate: LogInViewModelDelegate?
     
-    init(
-        delegate: LogInViewModelDelegate) {
+    init(delegate: LogInViewModelDelegate) {
             self.delegate = delegate
         }
     
