@@ -12,13 +12,23 @@ class LogInViewController: UIViewController {
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
     
-    private lazy var viewModel = LogInViewModel()
+    private lazy var viewModel = LogInViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpButton.setCustomButtonStyling()
     }
     
+    @IBAction private func loginButtonPressed(_ sender: Any) {
+        guard let username = usernameField.text else { return }
+        guard let password = passwordField.text else { return }
+        
+    viewModel.logInUser(username, password)
+        
+    }
+}
+
+extension LogInViewController: LogInViewModelDelegate {
     func navigateToHomePage() {
         let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
         
@@ -28,16 +38,10 @@ class LogInViewController: UIViewController {
         }
     }
     
-    @IBAction private func loginButtonPressed(_ sender: Any) {
-        guard let username = usernameField.text else { return }
-        guard let password = passwordField.text else { return }
-        
-        if viewModel.logInUser(username, password) {
-            navigateToHomePage()
-        } else {
-            self.displayAlert(title: "Log in failed",
-                              message: "Enter correct username or password",
-                              buttonTitle: "Ok")
-        }
+    func showError(error: String) {
+        self.displayAlert(title: "Log in failed",
+                          message: error,
+                          buttonTitle: "Ok")
     }
+   
 }
