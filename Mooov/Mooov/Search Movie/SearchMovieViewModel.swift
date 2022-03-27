@@ -31,11 +31,11 @@ class SearchMovieViewModel {
         return self.movieResults
     }
     
-    func getMovieTitle(_ atIndex: Int) -> String? {
+    func movieTitle(_ atIndex: Int) -> String? {
         return movieResults?.search[atIndex].title
     }
     
-    func getMovieObject(_ atIndex: Int) -> Movie? {
+    func movieObject(_ atIndex: Int) -> Movie? {
         return movieResults?.search[atIndex]
     }
     
