@@ -13,7 +13,7 @@ class SearchResultsViewController: UIViewController {
     
     private var searchText: String = ""
     
-    private lazy var viewModel = SearchMovieViewModel(repository: SearchMovieRepository(),
+    private lazy var viewModel = SearchMovieViewModel(repository: MovieRepository(),
                                                       delegate: self)
     
     override func viewDidLoad() {

@@ -20,7 +20,7 @@ class SavedMoviesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.getAllSavedMovies(delegate: self)
+        viewModel.getAllSavedMovies()
     }
 }
 
@@ -54,7 +54,7 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             guard let movieItem = viewModel.getMovie(atIndex: indexPath.row) else { return }
-            viewModel.deleteMovieItem(delegate: self, movieItem)
+            viewModel.deleteMovieItem(movieItem)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }

@@ -13,11 +13,11 @@ protocol ViewModelDelegate: AnyObject {
 }
 
 class SearchMovieViewModel {
-    private var repository: SearchMovieRepositoryType?
+    private var repository: MovieRepositoryType?
     private weak var delegate: ViewModelDelegate?
     private var movieResults: SearchResults?
     
-    init(repository: SearchMovieRepositoryType,
+    init(repository: MovieRepositoryType,
          delegate: ViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate

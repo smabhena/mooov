@@ -32,19 +32,19 @@ class SaveMovieViewModel {
         return movies?[atIndex] 
     }
     
-    func getAllSavedMovies(delegate: SaveMovieViewDelegate) {
+    func getAllSavedMovies() {
         do {
             movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest())
             DispatchQueue.main.async {
-                delegate.reloadView()
+                self.delegate?.reloadView()
             }
             
         } catch {
-            delegate.show(error: "Try again")
+            self.delegate?.show(error: "Try again")
         }
     }
     
-    func deleteMovieItem(delegate: SaveMovieViewDelegate, _ movieItem: MovieItem) {
+    func deleteMovieItem(_ movieItem: MovieItem) {
         guard let context = Constants.viewContext else {
             return
         }
@@ -54,7 +54,7 @@ class SaveMovieViewModel {
         do {
             try context.save()
         } catch {
-            delegate.show(error: "Try again")
+            self.delegate?.show(error: "Try again")
         }
     }
 }
