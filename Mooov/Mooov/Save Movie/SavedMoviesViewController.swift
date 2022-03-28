@@ -54,7 +54,7 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             guard let movieItem = viewModel.getMovie(atIndex: indexPath.row) else { return }
-            viewModel.deleteMovieItem(movieItem)
+            viewModel.deleteMovieItem(movieItem, indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }

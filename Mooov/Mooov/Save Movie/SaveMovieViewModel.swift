@@ -44,12 +44,13 @@ class SaveMovieViewModel {
         }
     }
     
-    func deleteMovieItem(_ movieItem: MovieItem) {
+    func deleteMovieItem(_ movieItem: MovieItem, _ index: Int) {
         guard let context = Constants.viewContext else {
             return
         }
         
         context.delete(movieItem)
+        movies?.remove(at: index)
         
         do {
             try context.save()
