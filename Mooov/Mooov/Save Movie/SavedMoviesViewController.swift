@@ -10,7 +10,7 @@ import UIKit
 class SavedMoviesViewController: UIViewController {
     @IBOutlet private weak var savedMoviesTableView: UITableView!
     
-    private lazy var viewModel = SaveMovieViewModel(delegate: self, repository: SaveMovieRepository())
+    private lazy var viewModel = SaveMovieViewModel(delegate: self, repository: CoreDataRepository())
 
     override func viewDidLoad() {
         super.viewDidLoad()

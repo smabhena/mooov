@@ -14,10 +14,10 @@ protocol SaveMovieViewDelegate: AnyObject {
 
 class SaveMovieViewModel {
     private weak var delegate: SaveMovieViewDelegate?
-    private var repository: SaveMovieRepository?
+    private var repository: CoreDataRepository?
     private var movies: [MovieItem]? = []
     
-    init(delegate: SaveMovieViewDelegate, repository: SaveMovieRepository) {
+    init(delegate: SaveMovieViewDelegate, repository: CoreDataRepository) {
         self.delegate = delegate
         self.repository = repository
     }

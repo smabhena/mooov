@@ -15,48 +15,57 @@ protocol MovieInfoViewModelDelegate: AnyObject {
 
 class MovieInfoViewModel {
     private weak var delegate: MovieInfoViewModelDelegate?
-    private var repository: MovieRepositoryType?
+    private var movieRepository: MovieRepositoryType?
+    private var coreDataRepository: CoreDataRepository?
     private var data: MovieInfo?
+    private var movie: Movie?
     
-    init(repository: MovieRepository,delegate: MovieInfoViewModelDelegate) {
+    init(movieRepository: MovieRepository,
+         coreDataRepository: CoreDataRepository,
+         delegate: MovieInfoViewModelDelegate) {
         self.delegate = delegate
-        self.repository = repository
+        self.movieRepository = movieRepository
+        self.coreDataRepository = coreDataRepository
     }
     
     var movieData: MovieInfo? {
         return data
     }
     
-    func createMovieItem(_ title: String?, _ image: String?) {
-        guard let title = title, let image = image, let context = Constants.viewContext else { return }
-
-        let newItem = MovieItem(context: context)
-        newItem.title = title
-        newItem.image = image
-        
-        do {
-            try context.save()
-            self.delegate?.disableButton()
-        } catch {
-            self.delegate?.showError(error: "Try again")
-        }
+    func setMovie(_ movie: Movie) {
+        self.movie = movie
     }
     
-    func isMovieSaved(_ movieTitle: String, _ movieImage: String) {
-        do {
-            guard let movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest()) else { return }
-            
-            for movie in movies where movie.title == movieTitle {
-                self.delegate?.disableButton()
-                return
+    func createMovie() {
+        guard let movie = movie else { return }
+        coreDataRepository?.createMovieItem(movie: movie, completion: { [weak self] result in
+            switch result {
+            case .success:
+                self?.delegate?.disableButton()
+            case .failure:
+                self?.delegate?.showError(error: "Failed to save movie")
             }
-        } catch {
-            self.delegate?.showError(error: "Try again")
-        }
+        })
     }
     
-    func fetchMovie(_ movieID: String) {
-        repository?.fetchMovie(movieID, completion: { [weak self] result in
+    func isMovieSaved() {   
+        guard let movieObject = movie else { return }
+        
+        coreDataRepository?.isMovieSaved(movieObject, completion: { [weak self] result in
+            switch result {
+            case .success:
+                self?.delegate?.disableButton()
+            case .failure:
+                self?.delegate?.showError(error: "Failed to check if movie is saved")
+            }
+        })
+        
+    }
+    
+    func fetchMovie() {
+        guard let movie = movie else { return }
+        
+        movieRepository?.fetchMovie(movie.imdbId, completion: { [weak self] result in
             switch result {
             case .success(let result):
                 self?.data = result

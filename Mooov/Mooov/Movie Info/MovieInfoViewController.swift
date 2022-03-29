@@ -16,41 +16,25 @@ class MovieInfoViewController: UIViewController {
     @IBOutlet private weak var plotLabel: UITextView!
     @IBOutlet private weak var savedMovieButton: UIButton!
     
-    private var id: String?
-    private var movieTitle: String?
-    private var image: String?
-    
-    private lazy var viewModel = MovieInfoViewModel(repository: MovieRepository() ,
+    private lazy var viewModel = MovieInfoViewModel(movieRepository: MovieRepository(),
+                                                    coreDataRepository: CoreDataRepository(),
                                                     delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let id = id {
-            viewModel.fetchMovie(id)
-        }
+        viewModel.fetchMovie()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let movieTitle = movieTitle, let image = image {
-            viewModel.isMovieSaved(movieTitle, image)
-        }
+        viewModel.isMovieSaved()
     }
     
     @IBAction private func tappedAddButton() {
-        viewModel.createMovieItem(movieTitle, image)
+        viewModel.createMovie()
     }
     
-    func setMovieId(_ id: String) {
-        self.id = id
-    }
-    
-    func setMovieTitle(_ title: String) {
-        self.movieTitle = title
-    }
-    
-    func setMovieImage(_ image: String) {
-        self.image = image
+    func setMovie(_ movie: Movie) {
+        viewModel.setMovie(movie)
     }
 }
 

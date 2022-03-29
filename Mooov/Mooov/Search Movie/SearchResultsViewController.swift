@@ -60,9 +60,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
                 guard let index = tableView.indexPathForSelectedRow?.row else { return }
                 guard let movie = viewModel.movieObject(index) else { return }
                 
-                movieInfoPage.setMovieId(movie.imdbId)
-                movieInfoPage.setMovieTitle(movie.title)
-                movieInfoPage.setMovieImage(movie.poster)
+                movieInfoPage.setMovie(movie)
         }
     }
 }

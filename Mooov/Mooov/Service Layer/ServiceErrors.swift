@@ -17,6 +17,7 @@ enum CoreDataError: String, Error {
     case deleteError
     case saveError
     case fetchError
+    case createError
 }
 
 enum Method {
