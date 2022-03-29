@@ -10,7 +10,7 @@ import UIKit
 class SavedMoviesViewController: UIViewController {
     @IBOutlet private weak var savedMoviesTableView: UITableView!
     
-    private lazy var viewModel = SaveMovieViewModel(delegate: self)
+    private lazy var viewModel = SaveMovieViewModel(delegate: self, repository: SaveMovieRepository())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class SavedMoviesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.getAllSavedMovies()
+        viewModel.allSavedMovies()
     }
 }
 
@@ -34,7 +34,7 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
 
-        guard let movie = viewModel.getMovie(atIndex: indexPath.row) else {
+        guard let movie = viewModel.movie(atIndex: indexPath.row) else {
             return UITableViewCell()
         }
         
@@ -53,7 +53,7 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            guard let movieItem = viewModel.getMovie(atIndex: indexPath.row) else { return }
+            guard let movieItem = viewModel.movie(atIndex: indexPath.row) else { return }
             viewModel.deleteMovieItem(movieItem, indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }

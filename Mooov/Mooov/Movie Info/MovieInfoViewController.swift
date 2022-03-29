@@ -65,7 +65,9 @@ extension MovieInfoViewController: MovieInfoViewModelDelegate {
         self.savedMovieButton.disableButton("Saved")
     }
     
-    func loadContent(data: MovieInfo) {
+    func loadContent() {
+        guard let data = viewModel.movieData else { return }
+        
         self.loadImageIntoImageView(data.poster, self.imageView)
         self.titleLabel.text = data.title
         self.genreLabel.text = data.genre

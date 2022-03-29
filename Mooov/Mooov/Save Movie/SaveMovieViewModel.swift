@@ -14,48 +14,49 @@ protocol SaveMovieViewDelegate: AnyObject {
 
 class SaveMovieViewModel {
     private weak var delegate: SaveMovieViewDelegate?
+    private var repository: SaveMovieRepository?
     private var movies: [MovieItem]? = []
     
-    init(delegate: SaveMovieViewDelegate) {
+    init(delegate: SaveMovieViewDelegate, repository: SaveMovieRepository) {
         self.delegate = delegate
+        self.repository = repository
     }
     
     var moviesCount: Int {
         return movies?.count ?? 0
     }
     
-    func getMovies() -> [MovieItem]? {
+    var movieList: [MovieItem]? {
         return movies
     }
     
-    func getMovie(atIndex: Int) -> MovieItem? {
+    func movie(atIndex: Int) -> MovieItem? {
         return movies?[atIndex] 
     }
     
-    func getAllSavedMovies() {
-        do {
-            movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest())
-            DispatchQueue.main.async {
-                self.delegate?.reloadView()
+    func allSavedMovies() {
+        repository?.fetchSavedMovies(completion: { [weak self] movies in
+            switch movies {
+            case .success(let savedMovies):
+                self?.movies = savedMovies
+                DispatchQueue.main.async {
+                    self?.delegate?.reloadView()
+                }
+            case .failure:
+                self?.delegate?.show(error: "Failed to fetch movies")
             }
-            
-        } catch {
-            self.delegate?.show(error: "Try again")
-        }
+        })
     }
     
     func deleteMovieItem(_ movieItem: MovieItem, _ index: Int) {
-        guard let context = Constants.viewContext else {
-            return
-        }
-        
-        context.delete(movieItem)
-        movies?.remove(at: index)
-        
-        do {
-            try context.save()
-        } catch {
-            self.delegate?.show(error: "Try again")
-        }
+        repository?.deleteMovie(movieItem: movieItem, completion: { [weak self] deleteMovie in
+            switch deleteMovie {
+            case .success:
+                self?.movies?.remove(at: index)
+            case .failure:
+                self?.delegate?.show(error: "Failed to delete movie")
+            }
+            
+        })
     }
 }

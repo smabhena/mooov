@@ -10,16 +10,21 @@ import Foundation
 protocol MovieInfoViewModelDelegate: AnyObject {
     func showError(error: String)
     func disableButton()
-    func loadContent(data: MovieInfo)
+    func loadContent()
 }
 
 class MovieInfoViewModel {
     private weak var delegate: MovieInfoViewModelDelegate?
     private var repository: MovieRepositoryType?
+    private var data: MovieInfo?
     
     init(repository: MovieRepository,delegate: MovieInfoViewModelDelegate) {
         self.delegate = delegate
         self.repository = repository
+    }
+    
+    var movieData: MovieInfo? {
+        return data
     }
     
     func createMovieItem(_ title: String?, _ image: String?) {
@@ -54,7 +59,8 @@ class MovieInfoViewModel {
         repository?.fetchMovie(movieID, completion: { [weak self] result in
             switch result {
             case .success(let result):
-                self?.delegate?.loadContent(data: result)
+                self?.data = result
+                self?.delegate?.loadContent()
             case .failure(let error):
                 self?.delegate?.showError(error: error.rawValue)
             }
