@@ -33,7 +33,7 @@ class MovieInfoViewController: UIViewController {
         viewModel.createMovie()
     }
     
-    func setMovie(_ movie: Movie) {
+    func set(_ movie: Movie) {
         viewModel.setMovie(movie)
     }
 }
