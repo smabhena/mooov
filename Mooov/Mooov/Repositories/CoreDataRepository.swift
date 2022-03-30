@@ -11,7 +11,14 @@ typealias SavedMoviesResult = (Result<[MovieItem], CoreDataError>) -> Void
 typealias DeleteMovie = (Result<Void, CoreDataError>) -> Void
 typealias CreateMovie = (Result<Void, CoreDataError>) -> Void
 
-class CoreDataRepository {
+protocol CoreDataRepositoryType: AnyObject {
+    func createMovieItem(movie: Movie?, completion: @escaping (CreateMovie))
+    func fetchSavedMovies(completion: @escaping (SavedMoviesResult))
+    func deleteMovie(movieItem: MovieItem, completion: @escaping (DeleteMovie))
+    func isMovieSaved(_ movie: Movie?, completion: @escaping (DeleteMovie))
+}
+
+class CoreDataRepository: CoreDataRepositoryType {
     private var movies: [MovieItem]? = []
     
     func createMovieItem(movie: Movie?, completion: @escaping (CreateMovie)) {

@@ -16,12 +16,12 @@ protocol MovieInfoViewModelDelegate: AnyObject {
 class MovieInfoViewModel {
     private weak var delegate: MovieInfoViewModelDelegate?
     private var movieRepository: MovieRepositoryType?
-    private var coreDataRepository: CoreDataRepository?
+    private var coreDataRepository: CoreDataRepositoryType?
     private var data: MovieInfo?
     private var movie: Movie?
     
-    init(movieRepository: MovieRepository,
-         coreDataRepository: CoreDataRepository,
+    init(movieRepository: MovieRepositoryType,
+         coreDataRepository: CoreDataRepositoryType,
          delegate: MovieInfoViewModelDelegate) {
         self.delegate = delegate
         self.movieRepository = movieRepository
