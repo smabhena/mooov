@@ -8,12 +8,14 @@
 import Foundation
 
 typealias SearchMovieResult = (Result<SearchResults, APIError>) -> Void
+typealias FetchMovie = (Result<MovieInfo, APIError>) -> Void
 
-protocol SearchMovieRepositoryType: AnyObject {
+protocol MovieRepositoryType: AnyObject {
     func fetchSearchResults(_ searchTitle: String, completion: @escaping(SearchMovieResult))
+    func fetchMovie(_ movieID: String, completion: @escaping(FetchMovie))
 }
 
-class SearchMovieRepository: SearchMovieRepositoryType {
+class MovieRepository: MovieRepositoryType {
     func fetchSearchResults(_ searchTitle: String, completion: @escaping (SearchMovieResult)) {
         let querySearch = URLQueryItem(name: "s", value: searchTitle)
         let queryResponse = URLQueryItem(name: "r", value: "json")
@@ -25,7 +27,17 @@ class SearchMovieRepository: SearchMovieRepositoryType {
         request(endpoint: endpoint, method: .GET, completion: completion)
     }
     
-    private func request(endpoint: Endpoint, method: Method, completion: @escaping(SearchMovieResult)) {
+    func fetchMovie(_ movieID: String, completion: @escaping (FetchMovie)) {
+        let queryID = URLQueryItem(name: "i", value: movieID)
+        let queryResponse = URLQueryItem(name: "r", value: "json")
+        var endpoint = Constants.endpoint
+        
+        endpoint.queryItems = [queryID, queryResponse]
+        
+        request(endpoint: endpoint, method: .GET, completion: completion)
+    }
+    
+    private func request<T: Codable>(endpoint: Endpoint, method: Method, completion: @escaping((Result<T, APIError>) -> Void)) {
         var request = URLRequest(url: endpoint.url)
         
         request.httpMethod = "\(method)"
@@ -35,7 +47,7 @@ class SearchMovieRepository: SearchMovieRepositoryType {
         call(with: request, completion: completion)
     }
     
-    private func call(with request: URLRequest, completion: @escaping(SearchMovieResult)) {
+    private func call<T: Codable>(with request: URLRequest, completion: @escaping((Result<T, APIError>) -> Void)) {
         let dataTask = URLSession.shared.dataTask(with: request) { data, _, error in
             guard error == nil else {
                 DispatchQueue.main.async {
@@ -50,7 +62,7 @@ class SearchMovieRepository: SearchMovieRepositoryType {
                     }
                     return
                 }
-                let object = try JSONDecoder().decode(SearchResults.self, from: data)
+                let object = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(Result.success(object))
                 }

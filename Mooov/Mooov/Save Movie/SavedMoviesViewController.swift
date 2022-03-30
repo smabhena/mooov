@@ -10,7 +10,7 @@ import UIKit
 class SavedMoviesViewController: UIViewController {
     @IBOutlet private weak var savedMoviesTableView: UITableView!
     
-    private var movies: [MovieItem]? = []
+    private lazy var viewModel = SaveMovieViewModel(delegate: self, repository: CoreDataRepository())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,55 +20,21 @@ class SavedMoviesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getAllSavedMovies()
+        viewModel.allSavedMovies()
     }
-    
-    func getAllSavedMovies() {
-        do {
-            movies = try Constants.viewContext?.fetch(MovieItem.fetchRequest())
-            DispatchQueue.main.async {
-                self.savedMoviesTableView.reloadData()
-            }
-            
-        } catch {
-            self.displayAlert(title: "Failed to fetch movies",
-                              message: "Try again",
-                              buttonTitle: "Ok")
-        }
-    }
-    
-    func deleteMovieItem(_ movieItem: MovieItem) {
-        guard let context = Constants.viewContext else {
-            return
-        }
-        
-        context.delete(movieItem)
-        
-        do {
-            try context.save()
-        } catch {
-            self.displayAlert(title: "Failed to delete movie",
-                              message: "Try again",
-                              buttonTitle: "Ok")
-        }
-    }
-
 }
 
 extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = movies?.count else {
-            return 0
-        }
-        return count
+        return viewModel.moviesCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SavedMovieTableViewCell else {
             return UITableViewCell()
         }
-        
-        guard let movie = movies?[indexPath.row] else {
+
+        guard let movie = viewModel.movie(atIndex: indexPath.row) else {
             return UITableViewCell()
         }
         
@@ -87,10 +53,21 @@ extension SavedMoviesViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            guard let movieItem = movies?[indexPath.row] else { return }
-            deleteMovieItem(movieItem)
-            movies?.remove(at: indexPath.row)
+            guard let movieItem = viewModel.movie(atIndex: indexPath.row) else { return }
+            viewModel.deleteMovieItem(movieItem, indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
+    }
+}
+
+extension SavedMoviesViewController: SaveMovieViewDelegate {
+    func reloadView() {
+        savedMoviesTableView.reloadData()
+    }
+    
+    func show(error: String) {
+        displayAlert(title: "Error occured",
+                     message: error,
+                     buttonTitle: "Ok")
     }
 }

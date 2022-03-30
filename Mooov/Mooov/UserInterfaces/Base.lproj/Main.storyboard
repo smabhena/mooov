@@ -126,7 +126,7 @@
         <!--Home-->
         <scene sceneID="WQO-8n-ONj">
             <objects>
-                <viewController storyboardIdentifier="landingPageVC" id="WfU-Ka-T5f" customClass="LandingPageViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="landingPageVC" id="WfU-Ka-T5f" customClass="HomePageViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AaA-cB-wXa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,6 +411,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
                     </tabBar>
                     <connections>
