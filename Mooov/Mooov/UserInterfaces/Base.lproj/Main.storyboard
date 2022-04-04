@@ -126,7 +126,7 @@
         <!--Home-->
         <scene sceneID="WQO-8n-ONj">
             <objects>
-                <viewController storyboardIdentifier="landingPageVC" id="WfU-Ka-T5f" customClass="LandingPageViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="landingPageVC" id="WfU-Ka-T5f" customClass="HomePageViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AaA-cB-wXa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,6 +411,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
                     </tabBar>
                     <connections>
@@ -488,13 +489,41 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lFj-rX-sFK">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="194" id="lFj-rX-sFK" customClass="SavedMovieTableViewCell" customModule="Mooov" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="194"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lFj-rX-sFK" id="cpQ-3J-FYP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wU2-aw-2XW">
+                                                    <rect key="frame" x="10" y="0.0" width="121" height="194"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="121" id="8V9-Ne-BYe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Movie label" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beQ-ck-mwS">
+                                                    <rect key="frame" x="139" y="70" width="238" height="53"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="beQ-ck-mwS" firstAttribute="leading" secondItem="wU2-aw-2XW" secondAttribute="trailing" constant="8" id="OVI-k1-sEM"/>
+                                                <constraint firstAttribute="bottom" secondItem="wU2-aw-2XW" secondAttribute="bottom" id="aJR-1H-UDo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="beQ-ck-mwS" secondAttribute="trailing" constant="17" id="asX-jr-Ga4"/>
+                                                <constraint firstItem="wU2-aw-2XW" firstAttribute="top" secondItem="cpQ-3J-FYP" secondAttribute="top" id="d1P-mY-4Fp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="beQ-ck-mwS" secondAttribute="bottom" constant="60" id="rEP-mZ-N51"/>
+                                                <constraint firstItem="wU2-aw-2XW" firstAttribute="leading" secondItem="cpQ-3J-FYP" secondAttribute="leading" constant="10" id="rMO-QU-kVo"/>
+                                                <constraint firstItem="beQ-ck-mwS" firstAttribute="top" secondItem="cpQ-3J-FYP" secondAttribute="topMargin" constant="59" id="xWf-fY-cgw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieImageView" destination="wU2-aw-2XW" id="pWG-vE-1u5"/>
+                                            <outlet property="movieTitleTextView" destination="beQ-ck-mwS" id="8HB-eT-H7m"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -516,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbD-8u-J7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2938" y="133"/>
+            <point key="canvasLocation" x="2937.68115942029" y="132.58928571428572"/>
         </scene>
         <!--Settings-->
         <scene sceneID="KT5-X9-Wh6">
@@ -567,6 +596,9 @@
         <namedColor name="SecondaryColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
