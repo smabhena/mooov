@@ -9,27 +9,41 @@ import Foundation
 
 protocol HomePageViewModelDelegate: AnyObject {
     func showError(error: String)
-    
+    func reloadView()
 }
 
 class HomePageViewModel {
     private weak var delegate: HomePageViewModelDelegate?
     private var repository: MovieRepositoryType?
-    private var newMovies: [String] = ["tt1877830","tt2463208"] // "The Batman", "The Adam Project"
-    private var fetchedMovies: [MovieInfo?] = []
+    private var newMovies: [String] = ["tt1877830","tt10293406", "tt1464335", "tt10872600"] // "The Batman", "The Adam Project"
+    private var fetchedMovies: [MovieInfo?]? = []
     
     init(delegate: HomePageViewModelDelegate,
          repository: MovieRepositoryType) {
         self.delegate = delegate
         self.repository = repository
+        self.fetchMovies()
     }
     
-    func newRelease() {
+    var count: Int {
+        return fetchedMovies?.count ?? 0
+    }
+    
+    var movies: [MovieInfo?]? {
+        return fetchedMovies
+    }
+    
+    func movie(atIndex: Int) -> MovieInfo? {
+        return fetchedMovies?[atIndex]
+    }
+    
+    func fetchMovies() {
         for movie in newMovies {
             repository?.fetchMovie(movie, completion: { [weak self] result in
                 switch result {
                 case .success(let result):
-                    self?.fetchedMovies.append(result)
+                    self?.fetchedMovies?.append(result)
+                    self?.delegate?.reloadView()
                 case .failure(let error):
                     self?.delegate?.showError(error: error.rawValue)
                 }

@@ -11,11 +11,14 @@ import UIKit
 class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var movieGenreLabel: UILabel!
     
-    func updateCellContent(_ movieImage: String,_ movieTitle: String) {
+    func updateCellContent(_ movieImage: String,_ movieTitle: String, _ movieGenre: String) {
         let imageURL = URL(string: movieImage)
         guard let imageURL = imageURL else { return }
         movieImageView.load(url: imageURL)
         movieTitleLabel.text = movieTitle
+        let genre = movieGenre.components(separatedBy: ",")
+        movieGenreLabel.text = genre[0]
     }
 }
