@@ -15,7 +15,6 @@ protocol HomePageViewModelDelegate: AnyObject {
 class HomePageViewModel {
     private weak var delegate: HomePageViewModelDelegate?
     private var repository: MovieRepositoryType?
-    private var newMovies: [String] = ["tt1877830","tt10293406", "tt1464335", "tt10872600"] // "The Batman", "The Adam Project"
     private var fetchedMovies: [MovieInfo?]? = []
     
     init(delegate: HomePageViewModelDelegate,
@@ -38,16 +37,57 @@ class HomePageViewModel {
     }
     
     func fetchMovies() {
-        for movie in newMovies {
-            repository?.fetchMovie(movie, completion: { [weak self] result in
-                switch result {
-                case .success(let result):
-                    self?.fetchedMovies?.append(result)
-                    self?.delegate?.reloadView()
-                case .failure(let error):
-                    self?.delegate?.showError(error: error.rawValue)
-                }
-            })
-        }
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+                
+        repository?.fetchMovie("tt1877830", completion: { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.fetchedMovies?.append(result)
+            case .failure(let error):
+                self?.delegate?.showError(error: error.rawValue)
+            }
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.enter()
+        
+        repository?.fetchMovie("tt10293406", completion: { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.fetchedMovies?.append(result)
+            case .failure(let error):
+                self?.delegate?.showError(error: error.rawValue)
+            }
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.enter()
+        
+        repository?.fetchMovie("tt1464335", completion: { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.fetchedMovies?.append(result)
+            case .failure(let error):
+                self?.delegate?.showError(error: error.rawValue)
+            }
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.enter()
+        
+        repository?.fetchMovie("tt10872600", completion: { [weak self] result in
+            switch result {
+            case .success(let result):
+                self?.fetchedMovies?.append(result)
+            case .failure(let error):
+                self?.delegate?.showError(error: error.rawValue)
+            }
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.notify(queue: .main, execute: {
+            self.delegate?.reloadView()
+        })
     }
 }
