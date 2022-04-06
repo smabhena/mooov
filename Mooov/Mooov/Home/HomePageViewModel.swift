@@ -28,10 +28,6 @@ class HomePageViewModel {
         return fetchedMovies?.count ?? 0
     }
     
-    var movies: [MovieInfo?]? {
-        return fetchedMovies
-    }
-    
     func movie(atIndex: Int) -> MovieInfo? {
         return fetchedMovies?[atIndex]
     }
