@@ -20,7 +20,7 @@ class LogInViewModel {
         }
     
     func logInUser(_ username: String, _ password: String) {
-        if username == "" && password == "" {
+        if username == "Admin" && password == "TestPass123" {
             delegate?.navigateToHomePage()
         } else {
             delegate?.showError(error: "Enter correct username or password")
