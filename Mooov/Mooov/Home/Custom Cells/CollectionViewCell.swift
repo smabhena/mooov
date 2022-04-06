@@ -14,8 +14,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var movieGenreLabel: UILabel!
     
     func updateCellContent(_ movieImage: String,_ movieTitle: String, _ movieGenre: String) {
-        let imageURL = URL(string: movieImage)
-        guard let imageURL = imageURL else { return }
+        guard let imageURL = URL(string: movieImage) else { return }
         movieImageView.load(url: imageURL)
         movieTitleLabel.text = movieTitle
         let genre = movieGenre.components(separatedBy: ",")
