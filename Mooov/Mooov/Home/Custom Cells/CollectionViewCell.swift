@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var movieGenreLabel: UILabel!
+    @IBOutlet weak private var movieImageView: UIImageView!
+    @IBOutlet weak private var movieTitleLabel: UILabel!
+    @IBOutlet weak private var movieGenreLabel: UILabel!
     
     func updateCellContent(_ movieImage: String,_ movieTitle: String, _ movieGenre: String) {
         guard let imageURL = URL(string: movieImage) else { return }

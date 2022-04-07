@@ -14,10 +14,6 @@
 		28051FAA27FB079100644D9B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FA827FB079100644D9B /* CollectionViewCell.swift */; };
 		28051FAB27FB079100644D9B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FA827FB079100644D9B /* CollectionViewCell.swift */; };
 		28051FBE27FD982700644D9B /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FBD27FD982700644D9B /* HomeTests.swift */; };
-		28051FC127FD984200644D9B /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FBF27FD984200644D9B /* MockRepository.swift */; };
-		28051FC427FD984C00644D9B /* MockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FC327FD984C00644D9B /* MockDelegate.swift */; };
-		28051FC527FD984C00644D9B /* MockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FC327FD984C00644D9B /* MockDelegate.swift */; };
-		28051FC627FD984C00644D9B /* MockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FC327FD984C00644D9B /* MockDelegate.swift */; };
 		28051FC727FDB54300644D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		28051FC827FDB54400644D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		28051FC927FDB55C00644D9B /* SavedMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */; };
@@ -127,8 +123,6 @@
 		28051FA327FAE54F00644D9B /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		28051FA827FB079100644D9B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		28051FBD27FD982700644D9B /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
-		28051FBF27FD984200644D9B /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
-		28051FC327FD984C00644D9B /* MockDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDelegate.swift; sourceTree = "<group>"; };
 		2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMovieTableViewCell.swift; sourceTree = "<group>"; };
 		28374B1927F191E10016C1CA /* MovieInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewModel.swift; sourceTree = "<group>"; };
 		28374B2227F243840016C1CA /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
@@ -206,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				28051FBD27FD982700644D9B /* HomeTests.swift */,
-				28051FC327FD984C00644D9B /* MockDelegate.swift */,
 			);
 			path = HomeTests;
 			sourceTree = "<group>";
@@ -311,7 +304,6 @@
 		287F2D5727C77CA800A1D228 /* MooovTests */ = {
 			isa = PBXGroup;
 			children = (
-				28051FBF27FD984200644D9B /* MockRepository.swift */,
 				28051FBC27FD981300644D9B /* HomeTests */,
 				287F2D5827C77CA800A1D228 /* MooovTests.swift */,
 			);
@@ -596,7 +588,6 @@
 				28CB734327EC7463004C2717 /* SaveMovieViewModel.swift in Sources */,
 				28E355D127EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */,
 				28374B1A27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */,
-				28051FC427FD984C00644D9B /* MockDelegate.swift in Sources */,
 				28E44C3927CC133900A30EE1 /* HomePageViewController.swift in Sources */,
 				287F2D7D27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28544B0527CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
@@ -627,7 +618,6 @@
 				287F2D7E27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28E355DD27EAFD5F007B759C /* ServiceErrors.swift in Sources */,
 				28E44C3A27CC133900A30EE1 /* HomePageViewController.swift in Sources */,
-				28051FC527FD984C00644D9B /* MockDelegate.swift in Sources */,
 				28E355D427EAFBF5007B759C /* SearchResultsViewController.swift in Sources */,
 				28544B1A27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
 				28E44C3627CC0A2200A30EE1 /* LogInViewController.swift in Sources */,
@@ -637,7 +627,6 @@
 				287F2D5927C77CA800A1D228 /* MooovTests.swift in Sources */,
 				28374B1B27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */,
 				28E355D827EAFC90007B759C /* MovieRepository.swift in Sources */,
-				28051FC127FD984200644D9B /* MockRepository.swift in Sources */,
 				287F2D7A27C77DED00A1D228 /* Constants.swift in Sources */,
 				289B115127D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */,
 				28051FC727FDB54300644D9B /* AppDelegate.swift in Sources */,
@@ -666,7 +655,6 @@
 				287F2D6327C77CA800A1D228 /* MooovUITests.swift in Sources */,
 				28E44C3B27CC133900A30EE1 /* HomePageViewController.swift in Sources */,
 				28374B1C27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */,
-				28051FC627FD984C00644D9B /* MockDelegate.swift in Sources */,
 				28051FAB27FB079100644D9B /* CollectionViewCell.swift in Sources */,
 				28544B1327CF8CE500B869B2 /* UIColorExtension.swift in Sources */,
 				28051FA627FAE54F00644D9B /* HomePageViewModel.swift in Sources */,

@@ -8,9 +8,10 @@
 import UIKit
 
 class HomePageViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak private var collectionView: UICollectionView!
     
-    private lazy var viewModel = HomePageViewModel(delegate: self, repository: MovieRepository())
+    private lazy var viewModel = HomePageViewModel(delegate: self,
+                                                   repository: MovieRepository())
 
     override func viewDidLoad() {
         super.viewDidLoad()
