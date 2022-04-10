@@ -9,31 +9,50 @@ import XCTest
 
 class HomeTests: XCTestCase {
     private var viewModel: HomePageViewModel!
-    private weak var mockDelegate: MockDelegate!
+    private var mockDelegate: MockDelegate!
     private var mockRepository: MockRepository!
 
     override func setUp() {
         super.setUp()
         mockRepository = MockRepository()
-        viewModel = HomePageViewModel(delegate: MockDelegate(), repository: mockRepository)
+        mockDelegate = MockDelegate()
+        viewModel = HomePageViewModel(delegate: mockDelegate,
+                                      repository: mockRepository)
     }
     
-    func testFetchMovie() {
+    func testFetchMoviesSuccess() {
         viewModel.fetchMovies()
-        XCTAssertEqual(viewModel.movie(atIndex: 0)?.title, "Superman")
+        XCTAssertFalse(mockDelegate.showErrorCalled)
+    }
+    
+    func testFetchMoviesFailure() {
+        mockRepository.shouldFail = true
+        viewModel.fetchMovies()
+        XCTAssert(mockDelegate.showErrorCalled)
     }
     
     func testMoviesCount() {
         XCTAssertEqual(viewModel.count, 4)
     }
+    
+    func testMovie() {
+        XCTAssertEqual(viewModel.movie(atIndex: 0)?.title, "Superman")
+    }
 }
 
 class MockDelegate: HomePageViewModelDelegate {
-    func showError(error: String) {}
+    var showErrorCalled = false
+    var showReloadViewCalled = false
+    
+    func showError(error: String) {
+        showErrorCalled = true
+    }
     func reloadView() {}
 }
 
 class MockRepository: MovieRepositoryType {
+    var shouldFail = false
+
     let movie: MovieInfo = MovieInfo(title: "Superman",
                                      year: "2020",
                                      rated: "8/10",
@@ -71,10 +90,19 @@ class MockRepository: MovieRepositoryType {
                                               response: "true")
     
     func fetchSearchResults(_ searchTitle: String, completion: @escaping (SearchMovieResult)) {
-        completion(.success(result))
+        if shouldFail {
+            completion(.failure(.serverError))
+        } else {
+            completion(.success(result))
+        }
+        
     }
     
     func fetchMovie(_ movieID: String, completion: @escaping (FetchMovie)) {
-        completion(.success(movie))
+        if shouldFail {
+            completion(.failure(.serverError))
+        } else {
+            completion(.success(movie))
+        }
     }
 }
