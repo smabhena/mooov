@@ -2,15 +2,23 @@
 
 Mooov is a movie information retrieval mobile application built for iOS. This application provides information about a movie's actors, release dates, ratings, etc.
 
+## Build badges ✅
+![Build Status](https://app.bitrise.io/app/9b0f106b93b4978e/status.svg?token=j48n-bLYlztmu15uflJrvw&branch=develop)
+
 ## Technologies used 💻
 - Swift
 - Swift Storyboards
+
+## Design
+- Sketch
 
 ## API used 🔗
 - https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/
 
 ## Features 📱
 - Searching for a movie
+- Saving a movie
+- Viewing saved movies
 
 ## App screenshots 📷
 <p align="center">
