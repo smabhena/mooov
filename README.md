@@ -15,14 +15,15 @@ Mooov is a movie information retrieval mobile application built for iOS. This ap
 ## App screenshots 📷
 <p align="center">
 <img src="https://user-images.githubusercontent.com/100207221/155948923-945d9944-7564-42b9-b130-aa1542868b28.png" width="300" height="530" />
-<img src="https://user-images.githubusercontent.com/100207221/155949042-eb9211f7-a751-4387-b5ca-31490771ef27.png" width="300" height="530" />
+<img width="300" height="530" alt="Screenshot 2022-04-12 at 09 15 20" src="https://user-images.githubusercontent.com/100207221/162904997-19f4d958-df85-44b4-90d2-94a9cde1abd6.png">
 </p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/100207221/157190954-fa697b74-70cb-4c7c-8b44-97c4eaed85ac.png" width="300" height="530" />
-<img src="https://user-images.githubusercontent.com/100207221/157191389-1df6ebcb-9394-4d55-9243-60910e9ed5b1.png" width="300" height="530" />
+<img width="300" height="530" alt="Screenshot 2022-04-12 at 09 27 00" src="https://user-images.githubusercontent.com/100207221/162905163-88c11164-6637-4d73-93f7-b6df71b992dc.png">
+<img width="300" height="530" alt="Screenshot 2022-04-12 at 09 28 34" src="https://user-images.githubusercontent.com/100207221/162905236-3dd8ea1c-8ae0-4d03-8bfc-d5293b4b6b4c.png">
 </p>
 </p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/100207221/157191048-6ebe434e-b178-4104-8934-161713dd2408.png" width="300" height="530" />
-<img src="https://user-images.githubusercontent.com/100207221/157191140-b7c332d1-34f2-4598-a4c6-97179bec03be.png" width="300" height="530" />
+ <img width="300" height="530" alt="Screenshot 2022-04-12 at 09 33 45" src="https://user-images.githubusercontent.com/100207221/162905904-e611e613-399f-4e45-a6f1-16bd79f0797d.png">
+<img width="300" height="530" alt="Screenshot 2022-04-12 at 09 27 40" src="https://user-images.githubusercontent.com/100207221/162905446-fb8ddf09-700c-4883-bcf0-0a506935b82b.png">
+<img width="300" height="530" alt="Screenshot 2022-04-12 at 09 27 20" src="https://user-images.githubusercontent.com/100207221/162905545-6767495d-3145-4d6d-948f-ae943054d027.png">
 </p>
