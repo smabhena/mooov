@@ -29,6 +29,25 @@ class LoginTests: XCTestCase {
         XCTAssertFalse(delegate.navigateToHomePageCalled)
     }
     
+    func testLoginUserFailureWithCorrectUsernameAndIncorrectPassword() {
+        viewModel.logInUser("Admin", "incorrectpassword")
+        XCTAssert(delegate.showErrorCalled)
+        XCTAssertFalse(delegate.navigateToHomePageCalled)
+        
+    }
+    
+    func testLoginUserFailureWithIncorrectUsernameAndCorrectPassword() {
+        viewModel.logInUser("John", "TestPass123")
+        XCTAssert(delegate.showErrorCalled)
+        XCTAssertFalse(delegate.navigateToHomePageCalled)
+    }
+    
+    func testLoginUserFailureWithEmptyFields() {
+        viewModel.logInUser("", "")
+        XCTAssert(delegate.showErrorCalled)
+        XCTAssertFalse(delegate.navigateToHomePageCalled)
+    }
+    
     class MockDelegate: LogInViewModelDelegate {
         var navigateToHomePageCalled = false
         var showErrorCalled = false
