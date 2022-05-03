@@ -7,14 +7,13 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        Thread.sleep(forTimeInterval: 0.2)
-        
+        FirebaseApp.configure()
         return true
     }
 
