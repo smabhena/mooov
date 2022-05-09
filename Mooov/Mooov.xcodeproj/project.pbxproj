@@ -43,6 +43,7 @@
 		28544B1927D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
 		28544B1A27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
 		28544B1B27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
+		2862EEB0282902BD00A07AB9 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2862EEAF282902BD00A07AB9 /* AddReviewViewController.swift */; };
 		287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4327C77CA100A1D228 /* SceneDelegate.swift */; };
 		287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4527C77CA100A1D228 /* SearchViewController.swift */; };
@@ -144,6 +145,7 @@
 		28544B1027CF8CE500B869B2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoModel.swift; sourceTree = "<group>"; };
 		28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		2862EEAF282902BD00A07AB9 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		287F2D3E27C77CA100A1D228 /* Mooov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287F2D4127C77CA100A1D228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287F2D4327C77CA100A1D228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				28BC285828222D1300DF1247 /* Repository */,
 				28BC285428222CF600DF1247 /* ReviewViewController.swift */,
 				28BC285628222D0400DF1247 /* ReviewViewModel.swift */,
+				2862EEAF282902BD00A07AB9 /* AddReviewViewController.swift */,
 			);
 			path = "Review Movie";
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				2831F5F427E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift in Sources */,
 				28BC285D2822435F00DF1247 /* ReviewModel.swift in Sources */,
 				289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
+				2862EEB0282902BD00A07AB9 /* AddReviewViewController.swift in Sources */,
 				289B114B27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				28051FA427FAE54F00644D9B /* HomePageViewModel.swift in Sources */,
 				28544B0927CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,

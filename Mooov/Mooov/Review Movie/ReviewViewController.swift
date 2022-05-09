@@ -15,6 +15,16 @@ class ReviewViewController: UIViewController {
         setUpTableView()
     }
     
+    @IBAction private func buttonPressed(_ sender: Any) {
+        let addReviewScreen = storyboard?.instantiateViewController(identifier: "addReviewVC") as? AddReviewViewController
+        
+        if let addReviewScreen = addReviewScreen {
+            if let navigator = self.navigationController {
+                navigator.pushViewController(addReviewScreen, animated: true)
+            }
+        }
+    }
+    
     private func setUpTableView() {
         reviewTableView.delegate = self
         reviewTableView.dataSource = self

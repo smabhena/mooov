@@ -657,6 +657,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Add review">
                                     <color key="baseBackgroundColor" name="PrimaryColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="YtW-yd-fTf" eventType="touchUpInside" id="RLP-f5-Xz9"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rPw-u3-bmS">
                                 <rect key="frame" x="0.0" y="88" width="414" height="645"/>
@@ -688,11 +691,28 @@
                     <navigationItem key="navigationItem" title="Reviews" id="eHc-xs-a8e"/>
                     <connections>
                         <outlet property="reviewTableView" destination="rPw-u3-bmS" id="kh3-gl-iB8"/>
+                        <segue destination="BgC-5g-ouP" kind="show" id="9TT-oq-O6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ye-gH-z54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3708.6956521739135" y="132.58928571428572"/>
+        </scene>
+        <!--Add Review View Controller-->
+        <scene sceneID="fU2-ly-KX1">
+            <objects>
+                <viewController storyboardIdentifier="addReviewVC" id="BgC-5g-ouP" customClass="AddReviewViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8K8-Wp-Ba1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3tt-a0-WZ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sJJ-Vk-vYP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7U-zh-kbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3708" y="836"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5eX-x2-PRc">
@@ -714,7 +734,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ni1-2d-tgF"/>
+        <segue reference="4ZU-mA-sjs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
