@@ -705,14 +705,55 @@
                     <view key="view" contentMode="scaleToFill" id="8K8-Wp-Ba1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7lC-yy-o9g">
+                                <rect key="frame" x="20" y="112" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Review" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-3M-Fx0">
+                                <rect key="frame" x="20" y="170" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="t0s-M2-kig"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-34-nwj">
+                                <rect key="frame" x="20" y="762" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Yop-c9-fDd"/>
+                                    <constraint firstAttribute="width" constant="374" id="b90-HJ-mQ0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add review">
+                                    <color key="baseBackgroundColor" red="0.34509804840000002" green="0.33725491169999999" blue="0.81176471709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3tt-a0-WZ6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="leading" secondItem="7lC-yy-o9g" secondAttribute="leading" id="Ao1-of-p59"/>
+                            <constraint firstItem="kxh-34-nwj" firstAttribute="bottom" secondItem="3tt-a0-WZ6" secondAttribute="bottom" constant="-11" id="BXg-k3-dtx"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="leading" secondItem="kxh-34-nwj" secondAttribute="leading" id="BqE-QJ-bm5"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="trailing" secondItem="7lC-yy-o9g" secondAttribute="trailing" id="FNk-KQ-YRQ"/>
+                            <constraint firstItem="3tt-a0-WZ6" firstAttribute="trailing" secondItem="kxh-34-nwj" secondAttribute="trailing" constant="20" id="Nwu-BH-rcz"/>
+                            <constraint firstItem="kxh-34-nwj" firstAttribute="leading" secondItem="3tt-a0-WZ6" secondAttribute="leading" constant="20" id="VDI-wR-wFX"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="top" secondItem="8K8-Wp-Ba1" secondAttribute="top" constant="170" id="YPK-PA-0ms"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="top" secondItem="7lC-yy-o9g" secondAttribute="bottom" constant="24" id="cTE-Pe-c36"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="trailing" secondItem="kxh-34-nwj" secondAttribute="trailing" id="pGD-47-eYm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sJJ-Vk-vYP"/>
+                    <connections>
+                        <outlet property="review" destination="7lC-yy-o9g" id="RQI-Ft-EXe"/>
+                        <outlet property="reviewTitle" destination="IS4-3M-Fx0" id="dJQ-CD-8HP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7U-zh-kbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708" y="836"/>
+            <point key="canvasLocation" x="3707.2463768115945" y="835.71428571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5eX-x2-PRc">
