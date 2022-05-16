@@ -698,7 +698,7 @@
             </objects>
             <point key="canvasLocation" x="3708.6956521739135" y="132.58928571428572"/>
         </scene>
-        <!--Add Review View Controller-->
+        <!--Add review-->
         <scene sceneID="fU2-ly-KX1">
             <objects>
                 <viewController storyboardIdentifier="addReviewVC" id="BgC-5g-ouP" customClass="AddReviewViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
@@ -729,6 +729,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Add review">
                                     <color key="baseBackgroundColor" red="0.34509804840000002" green="0.33725491169999999" blue="0.81176471709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addReviewPressed" destination="BgC-5g-ouP" eventType="touchUpInside" id="X3G-nn-BPH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3tt-a0-WZ6"/>
@@ -745,10 +748,10 @@
                             <constraint firstItem="IS4-3M-Fx0" firstAttribute="trailing" secondItem="kxh-34-nwj" secondAttribute="trailing" id="pGD-47-eYm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sJJ-Vk-vYP"/>
+                    <navigationItem key="navigationItem" title="Add review" id="sJJ-Vk-vYP"/>
                     <connections>
-                        <outlet property="review" destination="7lC-yy-o9g" id="RQI-Ft-EXe"/>
-                        <outlet property="reviewTitle" destination="IS4-3M-Fx0" id="dJQ-CD-8HP"/>
+                        <outlet property="reviewContent" destination="IS4-3M-Fx0" id="OTh-z0-Sbw"/>
+                        <outlet property="reviewTitle" destination="7lC-yy-o9g" id="Ale-AF-wfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7U-zh-kbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

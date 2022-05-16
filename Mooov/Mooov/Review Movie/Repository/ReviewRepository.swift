@@ -8,30 +8,31 @@
 import Foundation
 import FirebaseDatabase
 
-typealias CreateReview = ((Result<Bool, APIError>) -> Void)
+typealias CreateReview = ((Result<Void, APIError>) -> Void)
 
 protocol ReviewRepositoryType: AnyObject {
-    func createReview(completion: @escaping CreateReview)
+    func createReview(title: String, content: String, completion: @escaping CreateReview)
 }
 
 class ReviewRepository: ReviewRepositoryType {
     private let database = Database.database().reference()
     
-    func createReview(completion: @escaping CreateReview) {
-        let object: [String: Any] = [
-            "name" : "Dunkirk" as NSObject,
-            "content" : "blah"
-        ]
-//        do {
-//            let object = Review(name: <#T##String?#>, content: <#T##String?#>)
-//            database.child("reviews").setValue(object)
-//            DispatchQueue.main.async {
-//                completion(.success(true))
-//            }
-//        } catch {
-//            DispatchQueue.main.async {
-//                completion(.failure(.serverError))
-//            }
-//        }
+    func createReview(title: String, content: String, completion: @escaping CreateReview) {
+        let review = Review(title: title, content: content)
+        
+        do {
+            let data = try JSONEncoder().encode(review)
+            let json = try JSONSerialization.jsonObject(with: data)
+            
+            database.child("reviews").observeSingleEvent(of: .value, with: { snapshot in
+                self.database.child("reviews")
+                    .child("\(snapshot.childrenCount)")
+                    .setValue(json)
+                completion(.success(()))
+            })
+        } catch {
+            print("an error occurred", error)
+            completion(.failure(.internalError))
+        }
     }
 }

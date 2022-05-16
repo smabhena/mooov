@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review {
-    let name: String?
-    let content: String?
+struct Review: Codable {
+    let title: String
+    let content: String
 }
