@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B710CE8DCB069FF5B0CE402 /* Pods_Mooov_MooovUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B33633CB22AA5B5AAAA53E /* Pods_Mooov_MooovUITests.framework */; };
 		28051FA427FAE54F00644D9B /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FA327FAE54F00644D9B /* HomePageViewModel.swift */; };
 		28051FA527FAE54F00644D9B /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FA327FAE54F00644D9B /* HomePageViewModel.swift */; };
 		28051FA627FAE54F00644D9B /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FA327FAE54F00644D9B /* HomePageViewModel.swift */; };
@@ -21,6 +22,7 @@
 		28051FCD2807FA5900644D9B /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28051FCC2807FA5900644D9B /* LoginTests.swift */; };
 		2822FB95280FED0B009EE31B /* SearchMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2822FB94280FED0B009EE31B /* SearchMovieTests.swift */; };
 		2831F5F427E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */; };
+		28337BF028365B6F00C229C3 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28337BEF28365B6F00C229C3 /* ReviewTableViewCell.swift */; };
 		28374B1A27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374B1927F191E10016C1CA /* MovieInfoViewModel.swift */; };
 		28374B1B27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374B1927F191E10016C1CA /* MovieInfoViewModel.swift */; };
 		28374B1C27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374B1927F191E10016C1CA /* MovieInfoViewModel.swift */; };
@@ -42,6 +44,7 @@
 		28544B1927D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
 		28544B1A27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
 		28544B1B27D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */; };
+		2862EEB0282902BD00A07AB9 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2862EEAF282902BD00A07AB9 /* AddReviewViewController.swift */; };
 		287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4127C77CA100A1D228 /* AppDelegate.swift */; };
 		287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4327C77CA100A1D228 /* SceneDelegate.swift */; };
 		287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F2D4527C77CA100A1D228 /* SearchViewController.swift */; };
@@ -79,6 +82,11 @@
 		289B115C27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */; };
 		289B115D27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */; };
 		289B115E27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */; };
+		28A3DEF828212AD000F26221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28A3DEF728212AD000F26221 /* GoogleService-Info.plist */; };
+		28BC285528222CF600DF1247 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BC285428222CF600DF1247 /* ReviewViewController.swift */; };
+		28BC285728222D0400DF1247 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BC285628222D0400DF1247 /* ReviewViewModel.swift */; };
+		28BC285A28222D2800DF1247 /* ReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BC285928222D2800DF1247 /* ReviewRepository.swift */; };
+		28BC285D2822435F00DF1247 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BC285C2822435F00DF1247 /* ReviewModel.swift */; };
 		28CB733C27EC6E69004C2717 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB733B27EC6E69004C2717 /* LogInViewModel.swift */; };
 		28CB733D27EC6E69004C2717 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB733B27EC6E69004C2717 /* LogInViewModel.swift */; };
 		28CB733E27EC6E69004C2717 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB733B27EC6E69004C2717 /* LogInViewModel.swift */; };
@@ -102,6 +110,8 @@
 		28E44C3927CC133900A30EE1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3827CC133900A30EE1 /* HomePageViewController.swift */; };
 		28E44C3A27CC133900A30EE1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3827CC133900A30EE1 /* HomePageViewController.swift */; };
 		28E44C3B27CC133900A30EE1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E44C3827CC133900A30EE1 /* HomePageViewController.swift */; };
+		6EEEEA684BB3A645196A3961 /* Pods_MooovTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F890822347CD20D01298781C /* Pods_MooovTests.framework */; };
+		B05077D28C184C991D722CFE /* Pods_Mooov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C7633CBA9A8386E787C6B0 /* Pods_Mooov.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,12 +132,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047119C6BA35EFDC5F100E15 /* Pods-Mooov-MooovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooov-MooovUITests.release.xcconfig"; path = "Target Support Files/Pods-Mooov-MooovUITests/Pods-Mooov-MooovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		28051FA327FAE54F00644D9B /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		28051FA827FB079100644D9B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		28051FBD27FD982700644D9B /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		28051FCC2807FA5900644D9B /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		2822FB94280FED0B009EE31B /* SearchMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieTests.swift; sourceTree = "<group>"; };
 		2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMovieTableViewCell.swift; sourceTree = "<group>"; };
+		28337BEF28365B6F00C229C3 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		28374B1927F191E10016C1CA /* MovieInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewModel.swift; sourceTree = "<group>"; };
 		28374B2227F243840016C1CA /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		28544B0427CE192F00B869B2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -135,6 +147,7 @@
 		28544B1027CF8CE500B869B2 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		28544B1427CF9A2200B869B2 /* MovieInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoModel.swift; sourceTree = "<group>"; };
 		28544B1827D0C63C00B869B2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		2862EEAF282902BD00A07AB9 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		287F2D3E27C77CA100A1D228 /* Mooov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287F2D4127C77CA100A1D228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287F2D4327C77CA100A1D228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +171,11 @@
 		289B114E27D9E7FF00B97847 /* MovieItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		289B114F27D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		289B115B27D9EB5900B97847 /* SavedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMoviesViewController.swift; sourceTree = "<group>"; };
+		28A3DEF728212AD000F26221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28BC285428222CF600DF1247 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		28BC285628222D0400DF1247 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		28BC285928222D2800DF1247 /* ReviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRepository.swift; sourceTree = "<group>"; };
+		28BC285C2822435F00DF1247 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		28CB733B27EC6E69004C2717 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		28CB734227EC7463004C2717 /* SaveMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieViewModel.swift; sourceTree = "<group>"; };
 		28E355D027EAFBAC007B759C /* SearchMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +183,14 @@
 		28E355DB27EAFD5F007B759C /* ServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrors.swift; sourceTree = "<group>"; };
 		28E44C3427CC0A2200A30EE1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		28E44C3827CC133900A30EE1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		3EBD5BBC49EC2C17349FD991 /* Pods-Mooov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooov.release.xcconfig"; path = "Target Support Files/Pods-Mooov/Pods-Mooov.release.xcconfig"; sourceTree = "<group>"; };
+		5E7AD8D07F76F62CF5667B88 /* Pods-MooovTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooovTests.debug.xcconfig"; path = "Target Support Files/Pods-MooovTests/Pods-MooovTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB7EA5F7EEB2767837C862B /* Pods-Mooov.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooov.debug.xcconfig"; path = "Target Support Files/Pods-Mooov/Pods-Mooov.debug.xcconfig"; sourceTree = "<group>"; };
+		6ACD308E51614FBDA673BFC5 /* Pods-Mooov-MooovUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooov-MooovUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mooov-MooovUITests/Pods-Mooov-MooovUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		91C7633CBA9A8386E787C6B0 /* Pods_Mooov.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooov.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B33633CB22AA5B5AAAA53E /* Pods_Mooov_MooovUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooov_MooovUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F890822347CD20D01298781C /* Pods_MooovTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MooovTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA56244975316EA02C611A3E /* Pods-MooovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MooovTests.release.xcconfig"; path = "Target Support Files/Pods-MooovTests/Pods-MooovTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05077D28C184C991D722CFE /* Pods_Mooov.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EEEEA684BB3A645196A3961 /* Pods_MooovTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B710CE8DCB069FF5B0CE402 /* Pods_Mooov_MooovUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +257,14 @@
 			isa = PBXGroup;
 			children = (
 				2831F5F327E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		28337BEE28365B4C00C229C3 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				28337BEF28365B6F00C229C3 /* ReviewTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -287,6 +324,8 @@
 				287F2D5727C77CA800A1D228 /* MooovTests */,
 				287F2D6127C77CA800A1D228 /* MooovUITests */,
 				287F2D3F27C77CA100A1D228 /* Products */,
+				9D73655D796A52C3941A6148 /* Pods */,
+				BBAA0E5E4E046038A3DC611B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +346,7 @@
 				28374B2027F19C4F0016C1CA /* Home */,
 				28374B1827F191C10016C1CA /* Movie Info */,
 				28CB734127EC743A004C2717 /* Save Movie */,
+				28BC285328222CCD00DF1247 /* Review Movie */,
 				28E355CD27EAFB68007B759C /* Search Movie */,
 				28CB733A27EC6E32004C2717 /* Log in */,
 				28E355DA27EAFD44007B759C /* Service Layer */,
@@ -317,6 +357,7 @@
 				287F2D7227C77CC900A1D228 /* Config */,
 				287F2D7127C77CB700A1D228 /* Utilities */,
 				289B114927D9E37300B97847 /* Mooov.xcdatamodeld */,
+				28A3DEF728212AD000F26221 /* GoogleService-Info.plist */,
 			);
 			path = Mooov;
 			sourceTree = "<group>";
@@ -394,6 +435,35 @@
 			path = MovieItemClass;
 			sourceTree = "<group>";
 		};
+		28BC285328222CCD00DF1247 /* Review Movie */ = {
+			isa = PBXGroup;
+			children = (
+				28337BEE28365B4C00C229C3 /* TableViewCells */,
+				28BC285B2822435100DF1247 /* Models */,
+				28BC285828222D1300DF1247 /* Repository */,
+				28BC285428222CF600DF1247 /* ReviewViewController.swift */,
+				28BC285628222D0400DF1247 /* ReviewViewModel.swift */,
+				2862EEAF282902BD00A07AB9 /* AddReviewViewController.swift */,
+			);
+			path = "Review Movie";
+			sourceTree = "<group>";
+		};
+		28BC285828222D1300DF1247 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				28BC285928222D2800DF1247 /* ReviewRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		28BC285B2822435100DF1247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28BC285C2822435F00DF1247 /* ReviewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		28CB733A27EC6E32004C2717 /* Log in */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +511,29 @@
 			path = "Service Layer";
 			sourceTree = "<group>";
 		};
+		9D73655D796A52C3941A6148 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FB7EA5F7EEB2767837C862B /* Pods-Mooov.debug.xcconfig */,
+				3EBD5BBC49EC2C17349FD991 /* Pods-Mooov.release.xcconfig */,
+				6ACD308E51614FBDA673BFC5 /* Pods-Mooov-MooovUITests.debug.xcconfig */,
+				047119C6BA35EFDC5F100E15 /* Pods-Mooov-MooovUITests.release.xcconfig */,
+				5E7AD8D07F76F62CF5667B88 /* Pods-MooovTests.debug.xcconfig */,
+				FA56244975316EA02C611A3E /* Pods-MooovTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BBAA0E5E4E046038A3DC611B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91C7633CBA9A8386E787C6B0 /* Pods_Mooov.framework */,
+				E7B33633CB22AA5B5AAAA53E /* Pods_Mooov_MooovUITests.framework */,
+				F890822347CD20D01298781C /* Pods_MooovTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -448,10 +541,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287F2D6827C77CA800A1D228 /* Build configuration list for PBXNativeTarget "Mooov" */;
 			buildPhases = (
+				6BB195D75506A638846813E1 /* [CP] Check Pods Manifest.lock */,
 				287F2D8427C77E9100A1D228 /* ShellScript */,
 				287F2D3A27C77CA100A1D228 /* Sources */,
 				287F2D3B27C77CA100A1D228 /* Frameworks */,
 				287F2D3C27C77CA100A1D228 /* Resources */,
+				DA040E422730CFB05C73D0E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -466,6 +561,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287F2D6B27C77CA800A1D228 /* Build configuration list for PBXNativeTarget "MooovTests" */;
 			buildPhases = (
+				C2FDB89D8DA28ECB5B5B076A /* [CP] Check Pods Manifest.lock */,
 				287F2D5027C77CA800A1D228 /* Sources */,
 				287F2D5127C77CA800A1D228 /* Frameworks */,
 				287F2D5227C77CA800A1D228 /* Resources */,
@@ -484,9 +580,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287F2D6E27C77CA800A1D228 /* Build configuration list for PBXNativeTarget "MooovUITests" */;
 			buildPhases = (
+				BED9109AE682562768C36F3F /* [CP] Check Pods Manifest.lock */,
 				287F2D5A27C77CA800A1D228 /* Sources */,
 				287F2D5B27C77CA800A1D228 /* Frameworks */,
 				287F2D5C27C77CA800A1D228 /* Resources */,
+				7AD96F5F347DF9F096560BBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -547,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				287F2D4E27C77CA600A1D228 /* LaunchScreen.storyboard in Resources */,
+				28A3DEF828212AD000F26221 /* GoogleService-Info.plist in Resources */,
 				287F2D4B27C77CA600A1D228 /* Assets.xcassets in Resources */,
 				287F2D4927C77CA100A1D228 /* Main.storyboard in Resources */,
 			);
@@ -586,6 +685,106 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		6BB195D75506A638846813E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mooov-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AD96F5F347DF9F096560BBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mooov-MooovUITests/Pods-Mooov-MooovUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mooov-MooovUITests/Pods-Mooov-MooovUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mooov-MooovUITests/Pods-Mooov-MooovUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BED9109AE682562768C36F3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mooov-MooovUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2FDB89D8DA28ECB5B5B076A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MooovTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA040E422730CFB05C73D0E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mooov/Pods-Mooov-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mooov/Pods-Mooov-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mooov/Pods-Mooov-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -599,14 +798,18 @@
 				289B115327D9E7FF00B97847 /* MovieItem+CoreDataProperties.swift in Sources */,
 				287F2D8627C7BAB500A1D228 /* Endpoint.swift in Sources */,
 				287F2D4627C77CA100A1D228 /* SearchViewController.swift in Sources */,
+				28BC285A28222D2800DF1247 /* ReviewRepository.swift in Sources */,
 				287F2D4227C77CA100A1D228 /* AppDelegate.swift in Sources */,
 				289B115C27D9EB5900B97847 /* SavedMoviesViewController.swift in Sources */,
 				289B115027D9E7FF00B97847 /* MovieItem+CoreDataClass.swift in Sources */,
 				2831F5F427E9A68B00E6B7F1 /* SavedMovieTableViewCell.swift in Sources */,
+				28BC285D2822435F00DF1247 /* ReviewModel.swift in Sources */,
 				289B114127D5DD4600B97847 /* UIButtonExtension.swift in Sources */,
+				2862EEB0282902BD00A07AB9 /* AddReviewViewController.swift in Sources */,
 				289B114B27D9E37300B97847 /* Mooov.xcdatamodeld in Sources */,
 				28051FA427FAE54F00644D9B /* HomePageViewModel.swift in Sources */,
 				28544B0927CF855A00B869B2 /* MovieInfoViewController.swift in Sources */,
+				28BC285728222D0400DF1247 /* ReviewViewModel.swift in Sources */,
 				28CB734327EC7463004C2717 /* SaveMovieViewModel.swift in Sources */,
 				28E355D127EAFBAC007B759C /* SearchMovieViewModel.swift in Sources */,
 				28374B1A27F191E10016C1CA /* MovieInfoViewModel.swift in Sources */,
@@ -614,6 +817,7 @@
 				287F2D7D27C77E0200A1D228 /* MovieModel.swift in Sources */,
 				28544B0527CE192F00B869B2 /* UIViewControllerExtension.swift in Sources */,
 				28051FA927FB079100644D9B /* CollectionViewCell.swift in Sources */,
+				28337BF028365B6F00C229C3 /* ReviewTableViewCell.swift in Sources */,
 				28374B2327F243840016C1CA /* CoreDataRepository.swift in Sources */,
 				28544B1527CF9A2200B869B2 /* MovieInfoModel.swift in Sources */,
 				28544B1927D0C63C00B869B2 /* UIImageViewExtension.swift in Sources */,
@@ -621,6 +825,7 @@
 				28E355DC27EAFD5F007B759C /* ServiceErrors.swift in Sources */,
 				287F2D4427C77CA100A1D228 /* SceneDelegate.swift in Sources */,
 				287F2D8E27C7C70F00A1D228 /* SearchResultsViewController.swift in Sources */,
+				28BC285528222CF600DF1247 /* ReviewViewController.swift in Sources */,
 				28CB733C27EC6E69004C2717 /* LogInViewModel.swift in Sources */,
 				287F2D7927C77DED00A1D228 /* Constants.swift in Sources */,
 			);
@@ -855,6 +1060,7 @@
 		};
 		287F2D6927C77CA800A1D228 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB7EA5F7EEB2767837C862B /* Pods-Mooov.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -883,6 +1089,7 @@
 		};
 		287F2D6A27C77CA800A1D228 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EBD5BBC49EC2C17349FD991 /* Pods-Mooov.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -911,6 +1118,7 @@
 		};
 		287F2D6C27C77CA800A1D228 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E7AD8D07F76F62CF5667B88 /* Pods-MooovTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -931,6 +1139,7 @@
 		};
 		287F2D6D27C77CA800A1D228 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA56244975316EA02C611A3E /* Pods-MooovTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -951,6 +1160,7 @@
 		};
 		287F2D6F27C77CA800A1D228 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ACD308E51614FBDA673BFC5 /* Pods-Mooov-MooovUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -969,6 +1179,7 @@
 		};
 		287F2D7027C77CA800A1D228 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047119C6BA35EFDC5F100E15 /* Pods-Mooov-MooovUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

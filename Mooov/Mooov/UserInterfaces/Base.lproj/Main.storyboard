@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Mh-l7-urB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Mh-l7-urB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -552,11 +552,11 @@
             </objects>
             <point key="canvasLocation" x="2939" y="-601"/>
         </scene>
-        <!--Settings-->
+        <!--Reviews-->
         <scene sceneID="VCe-iE-yKV">
             <objects>
                 <navigationController id="CSU-Tb-0dU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="circle.dotted" catalog="system" id="vyv-sB-IhW"/>
+                    <tabBarItem key="tabBarItem" title="Reviews" image="book" catalog="system" id="vyv-sB-IhW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lok-ZF-1Df">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -639,21 +639,144 @@
             </objects>
             <point key="canvasLocation" x="2937.68115942029" y="132.58928571428572"/>
         </scene>
-        <!--Settings-->
+        <!--Reviews-->
         <scene sceneID="KT5-X9-Wh6">
             <objects>
-                <viewController id="YtW-yd-fTf" sceneMemberID="viewController">
+                <viewController id="YtW-yd-fTf" customClass="ReviewViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbZ-tP-AUD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf6-0Y-B3O">
+                                <rect key="frame" x="20" y="753" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zvT-Jq-7on"/>
+                                </constraints>
+                                <color key="tintColor" name="PrimaryColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add more reviews">
+                                    <color key="baseBackgroundColor" name="PrimaryColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="YtW-yd-fTf" eventType="touchUpInside" id="RLP-f5-Xz9"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rPw-u3-bmS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="645"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewCell" rowHeight="120" id="1dd-k4-mSZ" customClass="ReviewTableViewCell" customModule="Mooov" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1dd-k4-mSZ" id="Q3f-hr-v1s">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcQ-fW-IRw">
+                                                    <rect key="frame" x="20" y="11" width="374" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TvT-Bt-NUE">
+                                                    <rect key="frame" x="14" y="37" width="380" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="reviewContentLabel" destination="TvT-Bt-NUE" id="Yb1-eV-wvA"/>
+                                            <outlet property="reviewTitleLabel" destination="RcQ-fW-IRw" id="TNG-WD-sqQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JFe-zq-FJ6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kf6-0Y-B3O" firstAttribute="top" secondItem="rPw-u3-bmS" secondAttribute="bottom" constant="20" id="79j-7e-da0"/>
+                            <constraint firstItem="rPw-u3-bmS" firstAttribute="top" secondItem="JFe-zq-FJ6" secondAttribute="top" id="Kzn-gw-Fvr"/>
+                            <constraint firstItem="JFe-zq-FJ6" firstAttribute="bottom" secondItem="kf6-0Y-B3O" secondAttribute="bottom" constant="20" id="SER-pu-DHX"/>
+                            <constraint firstItem="JFe-zq-FJ6" firstAttribute="trailing" secondItem="rPw-u3-bmS" secondAttribute="trailing" id="XbY-2L-fj9"/>
+                            <constraint firstItem="rPw-u3-bmS" firstAttribute="leading" secondItem="JFe-zq-FJ6" secondAttribute="leading" id="ddY-vT-ULE"/>
+                            <constraint firstItem="kf6-0Y-B3O" firstAttribute="centerX" secondItem="xbZ-tP-AUD" secondAttribute="centerX" id="etQ-8D-18t"/>
+                            <constraint firstItem="kf6-0Y-B3O" firstAttribute="leading" secondItem="JFe-zq-FJ6" secondAttribute="leading" constant="20" id="hLU-UE-tD9"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="eHc-xs-a8e"/>
+                    <navigationItem key="navigationItem" title="Reviews" id="eHc-xs-a8e"/>
+                    <connections>
+                        <outlet property="reviewTableView" destination="rPw-u3-bmS" id="kh3-gl-iB8"/>
+                        <segue destination="BgC-5g-ouP" kind="show" id="9TT-oq-O6D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ye-gH-z54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3709" y="133"/>
+            <point key="canvasLocation" x="3708.6956521739135" y="132.58928571428572"/>
+        </scene>
+        <!--Add review-->
+        <scene sceneID="fU2-ly-KX1">
+            <objects>
+                <viewController storyboardIdentifier="addReviewVC" id="BgC-5g-ouP" customClass="AddReviewViewController" customModule="Mooov" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8K8-Wp-Ba1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7lC-yy-o9g">
+                                <rect key="frame" x="20" y="112" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Review" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IS4-3M-Fx0">
+                                <rect key="frame" x="20" y="170" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="t0s-M2-kig"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-34-nwj">
+                                <rect key="frame" x="20" y="762" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Yop-c9-fDd"/>
+                                    <constraint firstAttribute="width" constant="374" id="b90-HJ-mQ0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add review">
+                                    <color key="baseBackgroundColor" red="0.34509804840000002" green="0.33725491169999999" blue="0.81176471709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addReviewPressed" destination="BgC-5g-ouP" eventType="touchUpInside" id="X3G-nn-BPH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3tt-a0-WZ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="leading" secondItem="7lC-yy-o9g" secondAttribute="leading" id="Ao1-of-p59"/>
+                            <constraint firstItem="kxh-34-nwj" firstAttribute="bottom" secondItem="3tt-a0-WZ6" secondAttribute="bottom" constant="-11" id="BXg-k3-dtx"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="leading" secondItem="kxh-34-nwj" secondAttribute="leading" id="BqE-QJ-bm5"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="trailing" secondItem="7lC-yy-o9g" secondAttribute="trailing" id="FNk-KQ-YRQ"/>
+                            <constraint firstItem="3tt-a0-WZ6" firstAttribute="trailing" secondItem="kxh-34-nwj" secondAttribute="trailing" constant="20" id="Nwu-BH-rcz"/>
+                            <constraint firstItem="kxh-34-nwj" firstAttribute="leading" secondItem="3tt-a0-WZ6" secondAttribute="leading" constant="20" id="VDI-wR-wFX"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="top" secondItem="8K8-Wp-Ba1" secondAttribute="top" constant="170" id="YPK-PA-0ms"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="top" secondItem="7lC-yy-o9g" secondAttribute="bottom" constant="24" id="cTE-Pe-c36"/>
+                            <constraint firstItem="IS4-3M-Fx0" firstAttribute="trailing" secondItem="kxh-34-nwj" secondAttribute="trailing" id="pGD-47-eYm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add review" id="sJJ-Vk-vYP"/>
+                    <connections>
+                        <outlet property="reviewContent" destination="IS4-3M-Fx0" id="OTh-z0-Sbw"/>
+                        <outlet property="reviewTitle" destination="7lC-yy-o9g" id="Ale-AF-wfy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7U-zh-kbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3707.2463768115945" y="835.71428571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5eX-x2-PRc">
@@ -675,10 +798,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ni1-2d-tgF"/>
+        <segue reference="4ZU-mA-sjs"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="circle.dotted" catalog="system" width="128" height="121"/>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
