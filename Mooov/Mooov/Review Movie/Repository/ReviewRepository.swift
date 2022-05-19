@@ -9,6 +9,7 @@ import Foundation
 import FirebaseDatabase
 
 typealias CreateReview = ((Result<Void, APIError>) -> Void)
+typealias FetchReview = ((Result<[Review], APIError>) -> Void)
 
 protocol ReviewRepositoryType: AnyObject {
     func createReview(title: String, content: String, completion: @escaping CreateReview)
@@ -35,4 +36,27 @@ class ReviewRepository: ReviewRepositoryType {
             completion(.failure(.internalError))
         }
     }
+    
+    func fetchReviews(completion: @escaping FetchReview) {
+        database.child("reviews").getData(completion: { error, snapshot in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    completion(.failure(.serverError))
+                }
+                return
+            }
+            do {
+                let data = try JSONSerialization.data(withJSONObject: snapshot.value)
+                let object = try JSONDecoder().decode([Review].self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(object))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(.parsingError))
+                }
+            }
+        })
+    }
+
 }

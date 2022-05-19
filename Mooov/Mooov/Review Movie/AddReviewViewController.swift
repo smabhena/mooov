@@ -41,4 +41,6 @@ extension AddReviewViewController: ReviewViewModelDelegate {
                           message: error,
                           buttonTitle: "Ok")
     }
+    
+    func reload() {}
 }
